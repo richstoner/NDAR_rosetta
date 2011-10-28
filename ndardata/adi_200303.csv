@@ -1,0 +1,548 @@
+ElementName,DataType,Size,Unit,Required,ElementDescription,ValueRange,Keywords,Notes,Section,Aliases
+subjectkey,GUID,0,,Required,"The NDAR Global Unique Identifier (GUID) for subjects which identifies a subject in NDAR","NDAR*",,"","Header","GUID"
+src_subject_id,String,20,,Required,"The site's subject identification","",,"","Header","ADI_2003_SRC_Subject_ID,SubjectID"
+interview_date,Date,0,,Required,"Date on which the interview/genetic test/sampling/imaging was completed","MM/yyyy;MM/dd/yyyy",,"* '01/01/1900' indicates that a date associated with retrospective data is not known.","Header","Date_taken,ADI_2003_interview_date"
+interview_age,Integer,0,,Required,"Age in months at the time of the interview/test/sampling/imaging.","0 to 1200",,"Age is rounded to chronological month If the research participant is 13 days old at time of interview  the appropriate value would be 0 months if the participant is 19 days old the value would be 1 month","Header","ADI_2003_interview_age,Proband_Age_in_Months"
+comments_misc,String,255,,Optional,"Miscellaneous comments on study, interview, methodology relevant to this form data","",,"","Header","ADI_2003_comments_misc"
+bkgrnd_diag,String,255,,Required,"Diagnosis","",,"","Header","Adi_R_Diagnostic_Autism_DX,ADI_2003_bkgrnd_diag,summary_diagnosis"
+bkgrnd_med,String,255,,Recommended,"Medication","",,"","Header","MEDICATIONS_SPFY,ADI_2003_bkgrnd_med"
+bkgrnd_intro,String,1024,,Recommended,"Notes for Introductory Questions","",,"","Header","ADI_2003_bkgrnd_intro"
+bkgrnd_concern,String,1024,,Recommended,"Current Concerns (specify)","",,"","Header","ADI_R_Diagnostic_ADI_R_Raw_1,WPS_ADI_Q1A,DEVELOP_CONCERN_SPFY,ADI_2003_bkgrnd_concern"
+gender,String,50,,Required,"Gender","M;F",,"","Header","ADI_2003_gender"
+relationship,String,255,,Recommended,"Relationship of Respondent to Individual","",,"","Header","ADI_INFORM,informant_relation,ADI_2003_relationship"
+bkgrnd_family_dev_delay,String,255,,Recommended,"Family history of developmental delays","",,"","Header","ADI_2003_bkgrnd_family_dev_delay"
+bkgrnd_education,String,255,,Recommended,"Subject's education (school and preschool)","",,"","Header","ADI_2003_bkgrnd_education"
+earlydev_acon,Integer,0,,Recommended,"Age (in months) when parents first noticed that something is not quite right in language, relationships or behavior(in months)","0 to 900;991;992;996;997;998;999",,"","Early Development","WPS_ADI_Q2,ADI_R_Diagnostic_ADI_R_Raw_2a,DEVELOP_CONCERN_AGE_MNTH,ADI_2003_earlydev_acon,q_2_age_first_noticed_code"
+earlydev_fsymc,String,1024,,Recommended,"First symptoms to arouse parental concern (specify)","",,"","Early Development","WPS_ADI_Q3A,ADI_R_Diagnostic_ADI_R_Raw_3,DEVELOP_SYMP_1,ADI_2003_earlydev_fsymc"
+earlydev_hind,Integer,0,,Recommended,"Onset as perceived with hindsight","0;1;2;3;4;5;6;7;8;9",,"","Early Development","WPS_ADI_Q4,ADI_R_Diagnostic_ADI_R_Raw_4,DEVELOP_HINDSIGHT,q_4_onset_as_perceived_code,ADI_2003_earlydev_hind"
+earlydev_hind_cmt,String,255,,Optional,"Onset as perceived with hindsight - Comment","",,"","Early Development","DEVELOP_HINDSIGHT_DATE,ADI_2003_earlydev_hind_cmt"
+earlydev_walk,Integer,0,,Recommended,"First walked unaided (in months)","0 to 900;995;996;997;998;999",,"","Early Development","WPS_ADI_Q5,ADI_R_Diagnostic_ADI_R_Raw_5a,WALK_ALONE_AGE,ADI_2003_earlydev_walk,q_5_first_walked_code"
+earlydev_walk_cmt,String,255,,Optional,"First walked unaided - Comment","",,"995= Still not reached
+996= N/K but apparently normal
+997= N/K but apparently delayed
+998= N/A
+999= N/K or not asked","Early Development","WALK_ALONE,ADI_2003_earlydev_walk_cmt"
+earlydev_drydz,Integer,0,,Recommended,"Acquisition of bladder control: Daytime (in months)","0 to 900;993;994;995;996;997;998;999",,"","Early Development","WPS_ADI_Q6,ADI_R_Diagnostic_ADI_R_Raw_6a,TOILET_TRAIN_DAY_AGE,ADI_2003_earlydev_drydz,q_6_bladder_daytime_code"
+earlydev_drynz,Integer,0,,Recommended,"Acquisition of bladder control: Night (in months)","0 to 900;993;994;995;996;997;998;999",,"","Early Development","WPS_ADI_Q7,ADI_R_Diagnostic_ADI_R_Raw_7a,TOILET_TRAIN_NIGHT_AGE,ADI_2003_earlydev_drynz,q_7_bladder_nighttime_code"
+earlydev_bowel,Integer,0,,Recommended,"Acquisition of bowel control (in months)","0 to 900;993;994;995;996;997;998;999",,"","Early Development","WPS_ADI_Q8,ADI_R_Diagnostic_ADI_R_Raw_8a,BOWEL_CONTROL_AGE,q_8_bowel_control_code,ADI_2003_earlydev_bowel"
+earlydev_bowel_cmt,String,255,,Optional,"Acquisition of bowel control - Comment","",,"993= Achieved bowel control for a period of 12 months but has relapsed and now regularly soils
+994= Never achieved continence
+995= Still not reached
+996= N/K but apparently normal
+997= N/K but apparently delayed
+998= N/A
+999= N/K or not asked","Early Development","BOWEL_CONTROL,ADI_2003_earlydev_bowel_cmt"
+acqorlossoflang_aword,Integer,0,,Recommended,"Age of first single words (If ever used) - In months","0 to 900;993;994;996;997;999",,"","Acquisition and Loss of Language / Other Skills","WPS_ADI_Q9,ADI_R_Diagnostic_ADI_R_Raw_9a,SPCH_SINGLE_WORD_AGE,ADI_2003_acqorlossoflang_aword,q_9_first_single_words_code"
+acqorlossoflang_aword_cmt,String,255,,Recommended,"Single words examples","",,"993= Had some words then lost and not yet regained
+994= Milestone not reached
+996= N/K but apparently normal
+997= N/K but apparently delayed
+999= N/K or not asked","Acquisition and Loss of Language / Other Skills","SPCH_SINGLE_WORD,ADI_2003_acqorlossoflang_aword_cmt"
+acqorlossoflang_aphrase,Integer,0,,Recommended,"Age of first phrases (if ever used) - in months","0 to 900;993;994;996;997;999",,"","Acquisition and Loss of Language / Other Skills","ADI_R_Diagnostic_ADI_R_Raw_10a,PHRASE_AGE,WPS_ADI_Q10,ADI_2003_acqorlossoflang_aphrase,q_10_first_phrases_code"
+acqorlossoflang_aphrase_cmt,String,255,,Recommended,"First phrases examples","",,"993= Had some phrases then lost; not yet regained
+994= Milestone not reached
+996= N/K but apparently normal
+997= N/K but apparently delayed
+999= N/K or not asked","Acquisition and Loss of Language / Other Skills","PHRASE,ADI_2003_acqorlossoflang_aphrase_cmt"
+acqorlossoflang_loslang,Integer,0,,Recommended,"Loss of language skills after acquisition","0;1",,"0= No
+1= Yes","Acquisition and Loss of Language / Other Skills","WPS_ADI_11E,ADI_R_Diagnostic_ADI_R_Raw_11,WPS_ADI_Q11E,LANG_LOSS,q_11_loss_of_language,ADI_2003_acqorlossoflang_loslang"
+acqorlossoflang_levlang,Integer,0,,Recommended,"Level of communicative language before loss","0;1;2;3;8;9",,"0= Daily spontaneous and meaningful speech used communicatively
+1= Occasional and/or fewer than five words used spontaneously and communicatively
+2= Produced speech or sounds upon request
+3= Spontaneous imitations of vocalization
+8= No change or loss
+9= N/K or not asked","Acquisition and Loss of Language / Other Skills","WPS_ADI_Q12E,ADI_R_Diagnostic_ADI_R_Raw_12,LANG_LOSS_LEVEL,ADI_2003_acqorlossoflang_levlang,q_12_level_before_loss_code"
+acqorlossoflang_lossp,Integer,0,,Recommended,"Loss of spontaneous use of at least 5 meaningful words","0;1;2;8;9",,"0= No definite loss
+1= Probable loss of specified skill
+2= Definite loss of specified skill
+8= Insufficient language to show change specified
+9= N/K or not asked","Acquisition and Loss of Language / Other Skills","ADI_R_Diagnostic_ADI_R_Raw_13,LOSS_5_WORD,WPS_ADI_Q13E,ADI_2003_acqorlossoflang_lossp,q_13_loss_of_spontaneous_use_code"
+acqorlossoflang_losword,Integer,0,,Recommended,"Loss of communicative intent","0;1;2;8;9",,"0= No definite loss
+1= Probable loss of specified skill
+2= Definite loss of specified skill
+8= Insufficient language to show change specified
+9= N/K or not asked","Acquisition and Loss of Language / Other Skills","ADI_R_Diagnostic_ADI_R_Raw_14,LOSS_COMMUN_INTENT,WPS_ADI_Q14E,ADI_2003_acqorlossoflang_losword,q_14_loss_of_intent_code"
+acqorlossoflang_losssyn,Integer,0,,Recommended,"Loss of syntactical skills","0;1;2;8;9",,"0= No definite loss
+1= Probable loss of specified skill
+2= Definite loss of specified skill
+8= Insufficient language to show change specified
+9= N/K or not asked","Acquisition and Loss of Language / Other Skills","WPS_ADI_Q15E,ADI_R_Diagnostic_ADI_R_Raw_15,LOSS_GRAMMAR,ADI_2003_acqorlossoflang_losssyn,q_15_loss_of_syntactical_code"
+acqorlossoflang_lossart,Integer,0,,Recommended,"Loss of Articulation","0;1;2;8;9",,"0= No definite loss
+1= Probable loss of specified skill
+2= Definite loss of specified skill
+8= Insufficient language to show change specified
+9= N/K or not asked","Acquisition and Loss of Language / Other Skills","WPS_ADI_Q16E,ADI_R_Diagnostic_ADI_R_Raw_16,LOSS_ARTICULATION,q_16_loss_of_articulation_code,ADI_2003_acqorlossoflang_lossart"
+acqorlossoflang_aloslan,Integer,0,,Recommended,"Age when main loss of language skills first apparent (in months)","0 to 900;998;999",,"","Acquisition and Loss of Language / Other Skills","ADI_R_Diagnostic_ADI_R_Raw_17a,LANG_LOSS_MAIN_AGE,WPS_ADI_Q17,q_17_main_loss_apparent_code,ADI_2003_acqorlossoflang_aloslan"
+acqorlossoflang_losphys,Integer,0,,Recommended,"Association of loss with physical illness","0;1;2;8;9",,"0= Loss of skills but no possibly relevant association with a definite physical illness
+1= Loss associated with a definite illness
+2= Loss associated with impaired consciousness/epileptic attacks
+8= No loss of skills
+9= N/K or not asked","Acquisition and Loss of Language / Other Skills","WPS_ADI_Q18E,LANG_LOSS_PHYS_ILL,q_18_loss_due_to_illness,ADI_2003_acqorlossoflang_losphys"
+acqorlossoflang_losphys_cmt,String,255,,Optional,"Association of loss with physical illness - Comment","",,"","Acquisition and Loss of Language / Other Skills","ADI_R_Diagnostic_ADI_R_Raw_18,LANG_LOSS_PHYS_ILL_SPFY,ADI_2003_acqorlossoflang_losphys_cmt"
+acqorlossoflang_losdurn,Integer,0,,Recommended,"Duration of loss of Language skills (in months)","0 to 900;993;994;998;999",,"","Acquisition and Loss of Language / Other Skills","ADI_R_Diagnostic_ADI_R_Raw_19a,LANG_LOSS_DURATION_MNTH,WPS_ADI_Q19,q_19_duration_of_loss_code,ADI_2003_acqorlossoflang_losdurn"
+acqorlossoflang_elskil,Integer,0,,Recommended,"Loss of skills (for at least 3 months)","0;1;2;9",,"0= No consistent loss of skills
+1= Probable loss of skill
+2= Account of definite loss of skills
+9= N/K or not asked","Acquisition and Loss of Language / Other Skills","WPS_ADI_Q20E,ADI_R_Diagnostic_ADI_R_Raw_20,SKILL_LOSS_GEN,ADI_2003_acqorlossoflang_elskil,q_20_loss_of_skills_code"
+acqorlossoflang_elhand,Integer,0,,Recommended,"Purposive hand movements","0;1;2;9;8",,"0= None
+1= Possible loss
+2= Definite loss
+8= N/A
+9= N/K or not asked","Acquisition and Loss of Language / Other Skills","ADI_R_Diagnostic_ADI_R_Raw_21,SKILL_LOSS_HAND_MOVE,WPS_ADI_Q21E,q_21_puposive_hand_movements_code,ADI_2003_acqorlossoflang_elhand"
+acqorlossoflang_elmotr,Integer,0,,Recommended,"Motor skills","0;1;2;8;9",,"0= None
+1= Possible loss
+2= Definite loss
+8= N/A
+9= N/K or not asked","Acquisition and Loss of Language / Other Skills","ADI_R_Diagnostic_ADI_R_Raw_22,SKILL_LOSS_MOTOR,WPS_ADI_Q22E,q_22_motor_skills_code,ADI_2003_acqorlossoflang_elmotr"
+acqorlossoflang_losshlp,Integer,0,,Recommended,"Self help skills","0;1;2;8;9",,"0= None
+1= Possible loss
+2= Definite loss
+8= N/A
+9= N/K or not asked","Acquisition and Loss of Language / Other Skills","WPS_ADI_Q23E,ADI_R_Diagnostic_ADI_R_Raw_23,SKILL_LOSS_SELF_HELP,q_23_self_help_skills_code,ADI_2003_acqorlossoflang_losshlp"
+acqorlossoflang_elplay,Integer,0,,Recommended,"Constructive or Imaginative play","0;1;2;8;9",,"0= None
+1= Possible loss
+2= Definite loss
+8= N/A
+9= N/K or not asked","Acquisition and Loss of Language / Other Skills","WPS_ADI_Q24E,ADI_R_Diagnostic_ADI_R_Raw_24,SKILL_LOSS_PLAY,ADI_2003_acqorlossoflang_elplay,q_24_constructive_play_code"
+acqorlossoflang_elsoc,Integer,0,,Recommended,"Social engagement and responsiveness","0;1;2;8;9",,"0= None
+1= Possible loss
+2= Definite loss
+8= N/A
+9= N/K or not asked","Acquisition and Loss of Language / Other Skills","WPS_ADI_Q25E,ADI_R_Diagnostic_ADI_R_Raw_25,SKILL_LOSS_SOCIAL,q_25_social_engagement_code,ADI_2003_acqorlossoflang_elsoc"
+acqorlossoflang_ageloss,Integer,0,,Recommended,"Age when main loss of skill first apparent (Code in months)","1 to 900;998;999",,"","Acquisition and Loss of Language / Other Skills","ADI_R_Diagnostic_ADI_R_Raw_26a,SKILL_LOSS_MAIN_AGE,WPS_ADI_Q26,ADI_2003_acqorlossoflang_ageloss,q_26_loss_first_apparent_code"
+acqorlossoflang_elskph,Integer,0,,Recommended,"Association of loss with physical illness","0;1;2;8;9",,"0= Loss of skills not relevant to physical illness
+1= Loss associated with definite illness
+2= Loss associated with impaired consciousness/epileptic attacks
+8= No loss of skills
+9= N/K or not asked","Acquisition and Loss of Language / Other Skills","WPS_ADI_Q27E,ADI_R_Diagnostic_ADI_R_Raw_27,LOSS_SKILLS_PHYS_ILL,q_27_physical_illness_code,ADI_2003_acqorlossoflang_elskph"
+acqorlossoflang_durdet,Integer,0,,Recommended,"Duration of loss of Skills (in months)","1 to 900;993;994;998;999",,"","Acquisition and Loss of Language / Other Skills","ADI_R_Diagnostic_ADI_R_Raw_28a,SKILL_LOSS_DURATION_MNTH,WPS_ADI_Q28,ADI_2003_acqorlossoflang_durdet,q_28_duration_of_loss_code"
+funccom_ccompsl,Integer,0,,Recommended,"Comprehension of simple language - Current","0;1;2;3;4;8;9",,"0= In response to a request can usually perform an unexpected action/object
+1= In response to a request can usually get an object
+2= Understands many words
+3= Understands fewer than 50 words
+4= Little or no comprehension of words
+8= N/A
+9= N/K or not asked","Language and Communication Functioning","WPS_ADI_Q29C,COMPREHEND_SIMPLE_LANG,ADI_R_Diagnostic_ADI_R_Raw_29a,WPS_ADI_Q29,ADI_2003_funccom_ccompsl,q_29_compreh_simple_current"
+funccom_compsl5,Integer,0,,Recommended,"Comprehension of simple language - Most Abnormal","0;1;2;3;4;8;9",,"0= In response to a request can usually perform an unexpected action/object
+1= In response to a request can usually get an object
+2= Understands many words
+3= Understands fewer than 50 words
+4= Little or no comprehension of words
+8= N/A
+9= N/K or not asked","Language and Communication Functioning","WPS_ADI_Q29MA,ADI_R_Diagnostic_ADI_R_Raw_29,COMPREHEND_SIMPLE_LANG_ABNRM,ADI_R_Diagnostic_ADI_R_Raw_29b,WPS_ADI_Q29E,ADI_2003_funccom_compsl5,q_29_compreh_simple_most_abnormal"
+funccom_levell,Integer,0,,Recommended,"Overall level of language","0;1;2;9",,"0= Functional use of spontaneous echoed or stereotyped language
+1= No functional use of three-word phrases in speech
+2= Fewer than five words total or speech not used daily
+9= N/K or not asked","Language and Communication Functioning","WPS_ADI_Q30,ADI_R_Diagnostic_ADI_R_Raw_30,WPS_ADI_Q30C,LANGUAGE_LEVEL,ADI_2003_funccom_levell,q_30_overall_level_of_language"
+funccom_cusebod,Integer,0,,Recommended,"Use of other's body to communicate - Current","0;1;2;3;8;9",,"0= No use of other s body to communicate 1= Occasional placement of other s hand on objects or use of other s hand 2= Occasional placement of other s hand or use of other s hand without integration 3= Regular use of other s hand as a tool or to gesture "for" the child 8= Little or no spontaneous communication 9= N/K or not asked","Language and Communication Functioning","WPS_ADI_Q31,ADI_R_Diagnostic_ADI_R_Raw_31a,WPS_ADI_Q31C,COMMUNICATE_OTHR_BOD_CURR,ADI_2003_funccom_cusebod,q_31_use_of_oth_body_curr_code"
+funccom_eusebod,Integer,0,,Recommended,"Use of other's body to communicate - Ever","0;1;2;3;8;9",,"","Language and Communication Functioning","WPS_ADI_Q31E,ADI_R_Diagnostic_ADI_R_Raw_31b,ADI_R_Diagnostic_ADI_R_Raw_31,COMMUNICATE_OTHR_BOD_EVER,q_31_use_of_others_body_ever_code,ADI_2003_funccom_eusebod"
+funccom_cartic,Integer,0,,Recommended,"Articulation/pronunciation - Current","0;1;2;3;8;9",,"0= Understood by anybody
+1= Understood better by family
+2= Definite articulation difficulties
+3= Strangers find speech almost impossible
+8= N/A; no speech
+9= N/K or not asked","Language and Communication Functioning","WPS_ADI_Q32,ADI_R_Diagnostic_ADI_R_Raw_32a,WPS_ADI_Q32C,ARTICULATION,q_32_artic_pronun_current_code,ADI_2003_funccom_cartic"
+funccom_artic5,Integer,0,,Recommended,"Articulation/pronunciation - Age 5","0;1;2;3;8;9",,"0= Understood by anybody
+1= Understood better by family
+2= Definite articulation difficulties
+3= Strangers find speech almost impossible
+8= N/A; no speech
+9= N/K or not asked","Language and Communication Functioning","WPS_ADI_Q32E,ADI_R_Diagnostic_ADI_R_Raw_32b,ADI_R_Diagnostic_ADI_R_Raw_32,WPS_ADI_Q32_5Y,ARTICULATION_5YR,ADI_2003_funccom_artic5,q_32_artic_pronun_5years_code"
+funccom_cstereo,Integer,0,,Recommended,"Stereotyped utterances and delayed Echolalia - Current","0;1;2;3;8;9",,"0= Rarely or never uses stereotyped phrases
+1= Speech tends/tended to be more repetitive
+2= Often uses/used stereotyped utterances
+3= Phrases are almost exclusively stereotyped utterances
+8= N/A; no phrases
+9= N/K or not asked","Language and Communication Functioning","WPS_ADI_Q33,ADI_R_Diagnostic_ADI_R_Raw_33a,WPS_ADI_Q33C,STEROTYPE_UTTERANCE,ADI_2003_funccom_cstereo,q_33_stereotyped_utterances_current_code"
+funccom_estereo,Integer,0,,Recommended,"Stereotyped utterances and delayed Echolalia - Ever","0;1;2;3;8;9",,"0= Rarely or never uses stereotyped phrases
+1= Speech tends/tended to be more repetitive
+2= Often uses/used stereotyped utterances
+3= Phrases are almost exclusively stereotyped utterances
+8= N/A; no phrases
+9= N/K or not asked","Language and Communication Functioning","WPS_ADI_Q33E,ADI_R_Diagnostic_ADI_R_Raw_33b,ADI_R_Diagnostic_ADI_R_Raw_33,STEROTYPE_UTTERANCE_EVER,ADI_2003_funccom_estereo,q_33_stereotyped_utterances_ever_code"
+funccom_cchat,Integer,0,,Recommended,"Social vocalization/"Chat" - Current","0;1;2;8;9",,"0= Verbalizes or chats with clear social quality of talking
+1= Some social use of speech in response to caregiver
+2= Uses some speech to alert caregiver
+8= N/A
+9= N/K or not asked","Language and Communication Functioning","WPS_ADI_Q34,WPS_ADI_Q34C,SOCIAL_TALK,ADI_R_Diagnostic_ADI_R_Raw_34a,ADI_2003_funccom_cchat,q_34_social_verb_chat_current_code"
+funccom_chat5,Integer,0,,Recommended,"Social vocalization/"Chat" - Ever","0;1;2;8;9",,"0= Verbalizes or chats with clear social quality of talking
+1= Some social use of speech in response to caregiver
+2= Uses some speech to alert caregiver
+8= N/A
+9= N/K or not asked","Language and Communication Functioning","WPS_ADI_Q34E,ADI_R_Diagnostic_ADI_R_Raw_34,SOCIAL_TALK_EVER,ADI_R_Diagnostic_ADI_R_Raw_34b,q_34_social_verb_chat_ever_code,ADI_2003_funccom_chat5"
+funccom_cconver,Integer,0,,Recommended,"Reciprocal conversation (within subjects level of language) - Current","0;1;2;3;8;9",,"0= Conversation flows
+1= Occasional reciprocal conversation
+2= Little or no reciprocal conversation
+3= Very little spontaneous speech
+8= N/A
+9= N/K or not asked","Language and Communication Functioning","WPS_ADI_Q35,ADI_R_Diagnostic_ADI_R_Raw_35a,WPS_ADI_Q35C,CONSERVA,q_35_recipr_convers_current_code,ADI_2003_funccom_cconver"
+funccom_conver5,Integer,0,,Recommended,"Reciprocal conversation (within subjects level of language) - Ever (when verbal)","0;1;2;3;8;9",,"0= Conversation flows
+1= Occasional reciprocal conversation
+2= Little or no reciprocal conversation
+3= Very little spontaneous speech
+8= N/A
+9= N/K or not asked","Language and Communication Functioning","ADI_R_Diagnostic_ADI_R_Raw_35b,ADI_R_Diagnostic_ADI_R_Raw_35,CONSERVA_EVER,WPS_ADI_Q35E,q_35_recipr_convers_ever_code,ADI_2003_funccom_conver5"
+funccom_cinappq,Integer,0,,Recommended,"Inappropriate questions or statements - Current","0;1;2;8;9",,"0= No or very rare use of questions/statements
+1= Use of some questions/statements
+2= Frequent use of questions/statements
+8= N/A
+9= N/K or not asked","Language and Communication Functioning","WPS_ADI_Q36,ADI_R_Diagnostic_ADI_R_Raw_36a,WPS_ADI_Q36C,INAPPROPRIATE_STATEMENT,ADI_2003_funccom_cinappq,q_36_inappropriate_qs_current_code"
+funccom_einappq,Integer,0,,Recommended,"Inappropriate questions or statements - Ever","0;1;2;8;9",,"0= No or very rare use of questions/statements
+1= Use of some questions/statements
+2= Frequent use of questions/statements
+8= N/A
+9= N/K or not asked","Language and Communication Functioning","ADI_R_Diagnostic_ADI_R_Raw_36b,ADI_R_Diagnostic_ADI_R_Raw_36,INAPPROPRIATE_STATEMENT_EVER,WPS_ADI_Q36E,q_36_inappropriate_qs_ever_code,ADI_2003_funccom_einappq"
+funccom_inappq_cmt,String,255,,Optional,"Inappropriate questions or statements - Comment","",,"","Language and Communication Functioning","ADI_2003_funccom_inappq_cmt"
+funccom_cpron,Integer,0,,Recommended,"Pronominal reversal - Current","0;1;2;3;7;8;9",,"","Language and Communication Functioning","WPS_ADI_Q37,ADI_R_Diagnostic_ADI_R_Raw_37a,WPS_ADI_Q37C,PRONOMINAL_REVERSAL,ADI_2003_funccom_cpron,q_37_prenominal_reversal_current_code"
+funccom_epron,Integer,0,,Recommended,"Pronominal reversal - Ever","0;1;2;3;7;8;9",,"","Language and Communication Functioning","WPS_ADI_Q37E,ADI_R_Diagnostic_ADI_R_Raw_37b,ADI_R_Diagnostic_ADI_R_Raw_37,PRONOMINAL_REVERSAL_EVER,ADI_2003_funccom_epron,q_37_prenominal_reversal_ever_code"
+funccom_pron_cmt,String,255,,Optional,"Pronominal reversal - Comment","",,"","Language and Communication Functioning","ADI_2003_funccom_pron_cmt"
+funccom_cneoid,Integer,0,,Recommended,"Neologisms/Idiosyntric language - Current","0;1;2;8;9",,"0= No use of neologisms
+1= Occasional use of neologisms
+2= Regular use of neologisms
+8= N/A
+9= N/K or not asked","Language and Communication Functioning","WPS_ADI_Q38,ADI_R_Diagnostic_ADI_R_Raw_38a,WPS_ADI_Q38C,NEOLOGISM,q_38_neologisms_current_code,ADI_2003_funccom_cneoid"
+funccom_eneoid,Integer,0,,Recommended,"Neologisms/Idiosyntric language - Ever","0;1;2;8;9",,"0= No use of neologisms
+1= Occasional use of neologisms
+2= Regular use of neologisms
+8= N/A
+9= N/K or not asked","Language and Communication Functioning","WPS_ADI_Q38E,ADI_R_Diagnostic_ADI_R_Raw_38b,ADI_R_Diagnostic_ADI_R_Raw_38,NEOLOGISM_EVER,ADI_2003_funccom_eneoid,q_38_neologisms_ever_code"
+funccom_neoid_cmt,String,255,,Optional,"Neologisms/Idiosyntric language - Comment","",,"","Language and Communication Functioning","ADI_2003_funccom_neoid_cmt"
+funccom_cverrit,Integer,0,,Recommended,"Verbal Rituals - Current","0;1;2;3;8;9",,"","Language and Communication Functioning","WPS_ADI_Q39,ADI_R_Diagnostic_ADI_R_Raw_39a,WPS_ADI_Q39C,VERBAL_RITUAL,ADI_2003_funccom_cverrit,q_39_verbal_rituals_current_code"
+funccom_everrit,Integer,0,,Recommended,"Verbal Rituals - Ever","0;1;2;3;8;9",,"","Language and Communication Functioning","WPS_ADI_Q39E,ADI_R_Diagnostic_ADI_R_Raw_39b,ADI_R_Diagnostic_ADI_R_Raw_39,VERBAL_RITUAL_EVER,ADI_2003_funccom_everrit,q_39_verbal_rituals_ever_code"
+funccom_verrit_cmt,String,255,,Optional,"Verbal Rituals - Comment","",,"","Language and Communication Functioning","ADI_2003_funccom_verrit_cmt"
+funccom_cinr,Integer,0,,Recommended,"Intonation/Volume/Rhythm/Rate - Current","0;1;2;3;7;8;9",,"","Language and Communication Functioning","WPS_ADI_Q40,ADI_R_Diagnostic_ADI_R_Raw_40a,WPS_ADI_Q40C,INTONATION,q_40_inton_vol_rhythm_rate_current_code,ADI_2003_funccom_cinr"
+funccom_einr,Integer,0,,Recommended,"Intonation/Volume/Rhythm/Rate - Ever","0;1;2;3;7;8;9",,"","Language and Communication Functioning","WPS_ADI_Q40E,ADI_R_Diagnostic_ADI_R_Raw_40b,ADI_R_Diagnostic_ADI_R_Raw_40,INTONATION_EVER,q_40_inton_vol_rhythm_rate_ever_code,ADI_2003_funccom_einr"
+funccom_inr_cmt,String,255,,Optional,"Intonation/Volume/Rhythm/Rate - Comment","",,"","Language and Communication Functioning","ADI_2003_funccom_inr_cmt"
+funccom_cspeech,Integer,0,,Recommended,"Current communicative speech - Current","0;1;2;3;8;9",,"","Language and Communication Functioning","WPS_ADI_Q41,ADI_R_Diagnostic_ADI_R_Raw_41a,WPS_ADI_Q41C,COMMUNICATE_SPCH,ADI_2003_funccom_cspeech,q_41_cur_comm_speech_current_code"
+funccom_espeech,Integer,0,,Recommended,"Current communicative speech - Ever","0;1;2;3;8;9",,"","Language and Communication Functioning","ADI_R_Diagnostic_ADI_R_Raw_41b,ADI_R_Diagnostic_ADI_R_Raw_41,WPS_ADI_Q41_5Y,WPS_ADI_Q41E,ADI_2003_funccom_espeech,q_41_cur_comm_speech_at5_code"
+funccom_speech_cmt,String,255,,Optional,"Current communicative speech - Comment","",,"","Language and Communication Functioning","ADI_2003_funccom_speech_cmt"
+funccom_cpoint,Integer,0,,Recommended,"Pointing to express interest - Current","0;1;2;8;9",,"","Language and Communication Functioning","WPS_ADI_Q42,ADI_R_Diagnostic_ADI_R_Raw_42a,WPS_ADI_Q42C,CHILD_POINT_INTEREST,q_42_point_express_interest_current_code,ADI_2003_funccom_cpoint"
+funccom_point5,Integer,0,,Recommended,"Pointing to express interest - Most Abnormal","0;1;2;8;9",,"","Language and Communication Functioning","ADI_R_Diagnostic_ADI_R_Raw_42b,WPS_ADI_Q42MA,ADI_R_Diagnostic_ADI_R_Raw_42,CHILD_POINT_INTEREST_5YR,WPS_ADI_Q42E,q_42_point_express_inter_most_abnormal_code,ADI_2003_funccom_point5"
+funccom_cnod,Integer,0,,Recommended,"Nodding - Current","0;1;2;8;9",,"","Language and Communication Functioning","WPS_ADI_Q43,ADI_R_Diagnostic_ADI_R_Raw_43a,WPS_ADI_Q43C,NOD_HEAD_YES,ADI_2003_funccom_cnod,q_43_nodding_current_code"
+funccom_nod5,Integer,0,,Recommended,"Nodding - Most Abnormal","0;1;2;8;9",,"","Language and Communication Functioning","WPS_ADI_Q43E,ADI_R_Diagnostic_ADI_R_Raw_43b,WPS_ADI_Q43MA,ADI_R_Diagnostic_ADI_R_Raw_43,NOD_HEAD_YES_ABNRM,q_43_nodding_most_abnormal_code,ADI_2003_funccom_nod5"
+funccom_nod_cmt,String,255,,Optional,"Nodding - Comment","",,"","Language and Communication Functioning","ADI_2003_funccom_nod_cmt"
+funccom_chshake,Integer,0,,Recommended,"Head shaking - Current","0;1;2;8;9",,"","Language and Communication Functioning","WPS_ADI_Q44,ADI_R_Diagnostic_ADI_R_Raw_44a,WPS_ADI_Q44C,SHAKE_NO,q_44_head_shaking_current_code,ADI_2003_funccom_chshake"
+funccom_hshake5,Integer,0,,Recommended,"Head shaking - Most Abnormal","0;1;2;8;9",,"","Language and Communication Functioning","WPS_ADI_Q44E,ADI_R_Diagnostic_ADI_R_Raw_44b,WPS_ADI_Q44MA,ADI_R_Diagnostic_ADI_R_Raw_44,SHAKE_NO_ABNRM,q_44_head_shaking_most_abnormal_code,ADI_2003_funccom_hshake5"
+funccom_hshake_cmt,String,255,,Optional,"Head shaking - Comment","",,"","Language and Communication Functioning","ADI_2003_funccom_hshake_cmt"
+funccom_cinsges,Integer,0,,Recommended,"Conventional/Instrumental gestures - Current","0;1;2;3;8;9",,"","Language and Communication Functioning","WPS_ADI_Q45,ADI_R_Diagnostic_ADI_R_Raw_45a,WPS_ADI_Q45C,USE_GESTURE,ADI_2003_funccom_cinsges,q_45_conventional_instr_gests_current_code"
+funccom_insges5,Integer,0,,Recommended,"Conventional/Instrumental gestures - Most Abnormal","0;1;2;3;8;9",,"","Language and Communication Functioning","WPS_ADI_Q45E,ADI_R_Diagnostic_ADI_R_Raw_45b,ADI_R_Diagnostic_ADI_R_Raw_45,WPS_ADI_Q45MA,USE_GESTURE_ABNRM,ADI_2003_funccom_insges5,q_45_conventional_instr_gests_most_abnormal_code"
+funccom_cavoice,Integer,0,,Recommended,"Attention to Voice - Current","0;1;2;3;8;9",,"","Language and Communication Functioning","WPS_ADI_Q46,ADI_R_Diagnostic_ADI_R_Raw_46a,WPS_ADI_Q46C,ATTENTION_VOICE,ADI_2003_funccom_cavoice,q_46_attent_voice_current_code"
+funccom_avoice5,Integer,0,,Recommended,"Attention to Voice - Most Abnormal","0;1;2;3;8;9",,"","Language and Communication Functioning","WPS_ADI_Q46E,ADI_R_Diagnostic_ADI_R_Raw_46b,ADI_R_Diagnostic_ADI_R_Raw_46,WPS_ADI_Q46MA,ATTENTION_VOICE_ABNRM,q_46_attent_voice_most_abnormal_code,ADI_2003_funccom_avoice5"
+funccom_avoice_cmt,String,255,,Optional,"Attention to Voice - Comment","",,"","Language and Communication Functioning","ADI_2003_funccom_avoice_cmt"
+funccom_cimit,Integer,0,,Recommended,"Spontaneous imitation of actions - Current","0;1;2;3;8;9",,"","Language and Communication Functioning","WPS_ADI_Q47,ADI_R_Diagnostic_ADI_R_Raw_47a,WPS_ADI_Q47C,IMITATE_ACT,ADI_2003_funccom_cimit,q_47_spont_imit_current_code"
+funccom_imit5,Integer,0,,Recommended,"Spontaneous imitation of actions - Most Abnormal","0;1;2;3;8;9",,"","Language and Communication Functioning","WPS_ADI_Q47E,ADI_R_Diagnostic_ADI_R_Raw_47b,WPS_ADI_Q47MA,ADI_R_Diagnostic_ADI_R_Raw_47,IMITATE_ACT_ABNRM,ADI_2003_funccom_imit5,q_47_spont_imit_most_abnormal_code"
+funccom_imit_cmt,String,255,,Optional,"Spontaneous imitation of actions - Comment","",,"","Language and Communication Functioning","ADI_2003_funccom_imit_cmt"
+funccom_cplay,Integer,0,,Recommended,"Imaginative play - Current","0;1;2;3;8;9",,"","Language and Communication Functioning","WPS_ADI_Q48,WPS_ADI_Q48C,IMAGIN_PLAY,ADI_R_Diagnostic_ADI_R_Raw_48a,ADI_2003_funccom_cplay,q_48_imag_play_current_code"
+funccom_play5,Integer,0,,Recommended,"Imaginative play - Most Abnormal","0;1;2;3;8;9",,"","Language and Communication Functioning","WPS_ADI_Q48E,WPS_ADI_Q48MA,ADI_R_Diagnostic_ADI_R_Raw_48,IMAGIN_PLAY_ABNRM,ADI_R_Diagnostic_ADI_R_Raw_48b,ADI_2003_funccom_play5,q_48_imag_play_most_abnormal_code"
+funccom_play_cmt,String,255,,Optional,"Imaginative play - Comment","",,"","Language and Communication Functioning","ADI_2003_funccom_play_cmt"
+funccom_cpeerpl,Integer,0,,Recommended,"Imaginative play with peers - Current","0;1;2;3;8;9",,"","Language and Communication Functioning","WPS_ADI_Q49,ADI_R_Diagnostic_ADI_R_Raw_49a,WPS_ADI_Q49C,IMAGIN_PLAY_PEER,q_49_imag_play_peers_current_code,ADI_2003_funccom_cpeerpl"
+funccom_peerpl5,Integer,0,,Recommended,"Imaginative play with peers - Most Abnormal","0;1;2;3;8;9",,"","Language and Communication Functioning","ADI_R_Diagnostic_ADI_R_Raw_49b,WPS_ADI_Q49MA,ADI_R_Diagnostic_ADI_R_Raw_49,IMAGIN_PLAY_PEER_ABNRM,WPS_ADI_Q49E,q_49_imag_play_peers_most_abnormal_code,ADI_2003_funccom_peerpl5"
+socdev_cgaze,Integer,0,,Recommended,"Direct gaze - Current","0;1;2;3;8;9",,"","Social Development and Play","WPS_ADI_Q50,ADI_R_Diagnostic_ADI_R_Raw_50a,WPS_ADI_Q50C,STARES,q_50_direct_gaze_current_code,ADI_2003_socdev_cgaze"
+socdev_gaze5,Integer,0,,Recommended,"Direct gaze - Most Abnormal","0;1;2;3;8;9",,"","Social Development and Play","WPS_ADI_Q50E,ADI_R_Diagnostic_ADI_R_Raw_50b,ADI_R_Diagnostic_ADI_R_Raw_50,WPS_ADI_Q50MA,STARES_ABNRM,ADI_2003_socdev_gaze5,q_50_direct_gaze_most_abnormal_code"
+socdev_cssmile,Integer,0,,Recommended,"Social smiling - Current","0;1;2;3;8;9",,"","Social Development and Play","WPS_ADI_Q51,ADI_R_Diagnostic_ADI_R_Raw_51a,WPS_ADI_Q51C,SMILE_SOCIAL,q_51_social_smiling_current_code,ADI_2003_socdev_cssmile"
+socdev_ssmile5,Integer,0,,Recommended,"Social smiling - Most Abnormal","0;1;2;3;8;9",,"","Social Development and Play","WPS_ADI_Q51E,ADI_R_Diagnostic_ADI_R_Raw_51b,ADI_R_Diagnostic_ADI_R_Raw_51,WPS_ADI_Q51MA,SMILE_SOCIAL_ABNRM,ADI_2003_socdev_ssmile5,q_51_social_smiling_most_abnormal_code"
+socdev_cshow,Integer,0,,Recommended,"Showing and directing attention - Current","0;1;2;3;8;9",,"","Social Development and Play","WPS_ADI_Q52,ADI_R_Diagnostic_ADI_R_Raw_52a,WPS_ADI_Q52C,ATTENTION_SHOW,q_52_show_direct_atten_current_code,ADI_2003_socdev_cshow"
+socdev_show5,Integer,0,,Recommended,"Showing and directing attention - Most Abnormal","0;1;2;3;8;9",,"","Social Development and Play","WPS_ADI_Q52E,ADI_R_Diagnostic_ADI_R_Raw_52b,ADI_R_Diagnostic_ADI_R_Raw_52,WPS_ADI_Q52MA,ATTENTION_SHOW_ABNRM,ADI_2003_socdev_show5,q_52_show_direct_atten_most_abnormal_code"
+socdev_coshare,Integer,0,,Recommended,"Offering to Share - Current","0;1;2;3;8;9",,"","Social Development and Play","WPS_ADI_Q53,ADI_R_Diagnostic_ADI_R_Raw_53a,WPS_ADI_Q53C,SHARE_OFFER,q_53_offer_share_current_code,ADI_2003_socdev_coshare"
+socdev_oshare5,Integer,0,,Recommended,"Offering to Share - Most Abnormal","0;1;2;3;8;9",,"","Social Development and Play","WPS_ADI_Q53E,ADI_R_Diagnostic_ADI_R_Raw_53b,ADI_R_Diagnostic_ADI_R_Raw_53,WPS_ADI_Q53MA,SHARE_OFFER_ABNRM,q_53_offer_share_most_abnormal_code,ADI_2003_socdev_oshare5"
+socdev_cshare,Integer,0,,Recommended,"Seeking to share his/her enjoyment with others - Current","0;1;2;8;9",,"","Social Development and Play","WPS_ADI_Q54,ADI_R_Diagnostic_ADI_R_Raw_54a,WPS_ADI_Q54C,SEEK_SHARE_ENJOY,q_54_seek_share_enjoy_current_code,ADI_2003_socdev_cshare"
+socdev_share5,Integer,0,,Recommended,"Seeking to share his/her enjoyment with others - Most Abnormal","0;1;2;8;9",,"","Social Development and Play","WPS_ADI_Q54E,ADI_R_Diagnostic_ADI_R_Raw_54b,WPS_ADI_Q54MA,ADI_R_Diagnostic_ADI_R_Raw_54,SEEK_SHARE_ENJOY_ABNRM,ADI_2003_socdev_share5,q_54_seek_share_enjoy_most_abnormal_code"
+socdev_cocomf,Integer,0,,Recommended,"Offers comfort - Current","0;1;2;3;8;9",,"","Social Development and Play","WPS_ADI_Q55,ADI_R_Diagnostic_ADI_R_Raw_55a,WPS_ADI_Q55C,COMFORT_OFFER,ADI_2003_socdev_cocomf,q_55_offer_comf_current_code"
+socdev_ocomf5,Integer,0,,Recommended,"Offers comfort - Most Abnormal","0;1;2;3;8;9",,"","Social Development and Play","ADI_R_Diagnostic_ADI_R_Raw_55b,WPS_ADI_Q55MA,ADI_R_Diagnostic_ADI_R_Raw_55,COMFORT_OFFER_ABNRM,WPS_ADI_Q55E,ADI_2003_socdev_ocomf5,q_55_offer_comf_most_abnormal_code"
+socdev_cqualov,Integer,0,,Recommended,"Quality of social overtures - Current","0;1;2;3;8;9",,"","Social Development and Play","WPS_ADI_Q56,WPS_ADI_Q56C,SOCIAL_OVRTURE_QUALITY,ADI_R_Diagnostic_ADI_R_Raw_56a,ADI_2003_socdev_cqualov,q_56_qual_social_overts_current_code"
+socdev_qualov5,Integer,0,,Recommended,"Quality of social overtures - Most Abnormal","0;1;2;3;8;9",,"","Social Development and Play","ADI_R_Diagnostic_ADI_R_Raw_56,WPS_ADI_Q56MA,SOCIAL_OVRTURE_QUALITY_ABNRM,ADI_R_Diagnostic_ADI_R_Raw_56b,WPS_ADI_Q56E,ADI_2003_socdev_qualov5,q_56_qual_social_overts_most_abnormal_code"
+socdev_qualov_cmt,String,255,,Optional,"Quality of social overtures - Comment","",,"","Social Development and Play","ADI_2003_socdev_qualov_cmt"
+socdev_crfacex,Integer,0,,Recommended,"Range of facial expressions used to communicate - Current","0;1;2;3;8;9",,"","Social Development and Play","WPS_ADI_Q57,ADI_R_Diagnostic_ADI_R_Raw_57a,WPS_ADI_Q57C,FACIAL_EXPRESS_RANGE,ADI_2003_socdev_crfacex,q_57_range_facial_expr_current_code"
+socdev_rfacex5,Integer,0,,Recommended,"Range of facial expressions used to communicate - Most Abnormal","0;1;2;3;8;9",,"","Social Development and Play","WPS_ADI_Q57E,ADI_R_Diagnostic_ADI_R_Raw_57b,ADI_R_Diagnostic_ADI_R_Raw_57,WPS_ADI_Q57MA,FACIAL_EXPRESS_RANGE_ABNRM,ADI_2003_socdev_rfacex5,q_57_range_facial_expr_most_abnormal_code"
+socdev_rfacex_cmt,String,255,,Optional,"Range of facial expressions used to communicate - Comment","",,"","Social Development and Play","ADI_2003_socdev_rfacex_cmt"
+socdev_cinapfe,Integer,0,,Recommended,"Inappropriate facial expressions - Current","0;1;2;8;9",,"","Social Development and Play","WPS_ADI_Q58,ADI_R_Diagnostic_ADI_R_Raw_58a,WPS_ADI_Q58C,FACIAL_EXPRESS_INAPPROPRIATE,ADI_2003_socdev_cinapfe,q_58_inappropriate_facial_current_code"
+socdev_einapfe,Integer,0,,Recommended,"Inappropriate facial expressions - Ever","0;1;2;8;9",,"","Social Development and Play","WPS_ADI_Q58E,ADI_R_Diagnostic_ADI_R_Raw_58b,ADI_R_Diagnostic_ADI_R_Raw_58,FACIAL_EXPRESS_INAPPROPRIATE_EVER,q_58_inappropriate_facial_ever_code,ADI_2003_socdev_einapfe"
+socdev_inapfe_cmt,String,255,,Optional,"Inappropriate facial expressions - Comment","",,"","Social Development and Play","ADI_2003_socdev_inapfe_cmt"
+socdev_cresp,Integer,0,,Recommended,"Appropriateness of social responses - Current","0;1;2;3;8;9",,"","Social Development and Play","WPS_ADI_Q59,ADI_R_Diagnostic_ADI_R_Raw_59a,WPS_ADI_Q59C,SOCIAL_RESPONSE,q_59_appropriat_resp_current_code,ADI_2003_socdev_cresp"
+socdev_resp5,Integer,0,,Recommended,"Appropriateness of social responses - Most Abnormal","0;1;2;3;8;9",,"","Social Development and Play","WPS_ADI_Q59E,ADI_R_Diagnostic_ADI_R_Raw_59b,WPS_ADI_Q59MA,ADI_R_Diagnostic_ADI_R_Raw_59,SOCIAL_RESPONSE_ABNRM,ADI_2003_socdev_resp5,q_59_appropriat_resp_most_abnormal_code"
+socdev_resp_cmt,String,255,,Optional,"Appropriateness of social responses - Comment","",,"","Social Development and Play","ADI_2003_socdev_resp_cmt"
+socdev_favact_1,String,255,,Recommended,"Favorite activities 1","",,"","Social Development and Play","ADI_2003_socdev_favact_1"
+socdev_favact_2,String,255,,Recommended,"Favorite activities 2","",,"","Social Development and Play","ADI_2003_socdev_favact_2"
+socdev_favact_3,String,255,,Recommended,"Favorite activities 3","",,"","Social Development and Play","ADI_2003_socdev_favact_3"
+socdev_favact_4,String,255,,Recommended,"Favorite activities 4","",,"","Social Development and Play","ADI_2003_socdev_favact_4"
+socdev_favact_5,String,255,,Recommended,"Favorite activities 5","",,"","Social Development and Play","ADI_2003_socdev_favact_5"
+socdev_favact_cmt,String,255,,Optional,"Favorite activities - Comment","",,"","Social Development and Play","ACT_TOY_FAVORITE,ADI_2003_socdev_favact_cmt"
+socdev_favtoy_1,String,255,,Recommended,"Favorite toys/objects 1","",,"","Social Development and Play","ADI_2003_socdev_favtoy_1"
+socdev_favtoy_2,String,255,,Recommended,"Favorite toys/objects 2","",,"","Social Development and Play","ADI_2003_socdev_favtoy_2"
+socdev_favtoy_3,String,255,,Recommended,"Favorite toys/objects 3","",,"","Social Development and Play","ADI_2003_socdev_favtoy_3"
+socdev_favtoy_4,String,255,,Recommended,"Favorite toys/objects 4","",,"","Social Development and Play","ADI_2003_socdev_favtoy_4"
+socdev_favtoy_5,String,255,,Recommended,"Favorite toys/objects 5","",,"","Social Development and Play","ADI_2003_socdev_favtoy_5"
+socdev_favtoy_cmt,String,255,,Optional,"Favorite toys/objects - Comment","",,"","Social Development and Play","ADI_2003_socdev_favtoy_cmt"
+socdev_cinitia,Integer,0,,Recommended,"Initiation of appropriate activities - Current","0;1;2;3;8;9",,"","Social Development and Play","WPS_ADI_Q60,ADI_R_Diagnostic_ADI_R_Raw_60a,WPS_ADI_Q60C,ACT_INITIATE,ADI_2003_socdev_cinitia,q_60_init_activities_current_code"
+socdev_initia5,Integer,0,,Recommended,"Initiation of appropriate activities - Most Abnormal","0;1;2;3;8;9",,"","Social Development and Play","WPS_ADI_Q60E,ADI_R_Diagnostic_ADI_R_Raw_60b,ADI_R_Diagnostic_ADI_R_Raw_60,WPS_ADI_Q60MA,ACT_INITIATE_ABNRM,ADI_2003_socdev_initia5,q_60_init_activities_most_abnormal_code"
+socdev_initia_cmt,String,255,,Optional,"Initiation of appropriate activities - Comment","",,"","Social Development and Play","ADI_2003_socdev_initia_cmt"
+socdev_csoplay,Integer,0,,Recommended,"Imitative social play - Current","0;1;2;3;8;9",,"","Social Development and Play","WPS_ADI_Q61,ADI_R_Diagnostic_ADI_R_Raw_61a,WPS_ADI_Q61C,PLAY_INITIATE_SOCIAL,q_61_imit_soc_play_current_code,ADI_2003_socdev_csoplay"
+socdev_soplay5,Integer,0,,Recommended,"Imitative social play - Most Abnormal","0;1;2;3;8;9",,"","Social Development and Play","ADI_R_Diagnostic_ADI_R_Raw_61b,ADI_R_Diagnostic_ADI_R_Raw_61,WPS_ADI_Q61MA,PLAY_INITIATE_SOCIAL_ABNRM,WPS_ADI_Q61E,ADI_2003_socdev_soplay5,q_61_imit_soc_play_most_abnormal_code"
+socdev_cintch,Integer,0,,Recommended,"Interest in children - Current","0;1;2;3;8;9",,"","Social Development and Play","WPS_ADI_Q62,ADI_R_Diagnostic_ADI_R_Raw_62a,WPS_ADI_Q62C,INEREST_CHILD,ADI_2003_socdev_cintch,q_62_inter_children_current_code"
+socdev_intch5,Integer,0,,Recommended,"Interest in children - Most Abnormal","0;1;2;3;8;9",,"","Social Development and Play","ADI_R_Diagnostic_ADI_R_Raw_62b,ADI_R_Diagnostic_ADI_R_Raw_62,WPS_ADI_Q62MA,INEREST_CHILD_ABNRM,WPS_ADI_Q62E,ADI_2003_socdev_intch5,q_62_inter_children_most_abnormal_code"
+socdev_crespch,Integer,0,,Recommended,"Response to approaches of other children - Current","0;1;2;3;8;9",,"","Social Development and Play","WPS_ADI_Q63,ADI_R_Diagnostic_ADI_R_Raw_63a,WPS_ADI_Q63C,RESPOND_CHILD,ADI_2003_socdev_crespch,q_63_resp_approaches_current_code"
+socdev_respch5,Integer,0,,Recommended,"Response to approaches of other children - Most Abnormal","0;1;2;3;8;9",,"","Social Development and Play","WPS_ADI_Q63E,ADI_R_Diagnostic_ADI_R_Raw_63b,ADI_R_Diagnostic_ADI_R_Raw_63,WPS_ADI_Q63MA,RESPOND_CHILD_ABNRM,ADI_2003_socdev_respch5,q_63_resp_approaches_most_abnormal_code"
+socdev_cgrplay,Integer,0,,Recommended,"Group play with peers - Current","0;1;2;3;8;9",,"","Social Development and Play","WPS_ADI_Q64,ADI_R_Diagnostic_ADI_R_Raw_64a,WPS_ADI_Q64C,GROUP_PLAY_PEER,ADI_2003_socdev_cgrplay,q_64_group_play_peers_current_code"
+socdev_grplay5,Integer,0,,Recommended,"Group play with peers - Most Abnormal","0;1;2;3;8;9",,"","Social Development and Play","WPS_ADI_Q64E,ADI_R_Diagnostic_ADI_R_Raw_64b,ADI_R_Diagnostic_ADI_R_Raw_64,WPS_ADI_Q64MA,GROUP_PLAY_PEER_ABNRM,q_64_group_play_peers_most_abnormal_code,ADI_2003_socdev_grplay5"
+socdev_cfriend,Integer,0,,Recommended,"Friendships - Current","0;1;2;3;8;9",,"","Social Development and Play","WPS_ADI_Q65,ADI_R_Diagnostic_ADI_R_Raw_65a,WPS_ADI_Q65C,FRIENDS,q_65_friendships_current_code,ADI_2003_socdev_cfriend"
+socdev_frend15,Integer,0,,Recommended,"Friendships - Most Abnormal","0;1;2;3;8;9",,"","Social Development and Play","WPS_ADI_Q65E,ADI_R_Diagnostic_ADI_R_Raw_65b,ADI_R_Diagnostic_ADI_R_Raw_65,WPS_ADI_Q65MA,FRIENDS_ABNRM,ADI_2003_socdev_frend15,q_65_friendships_most_abnormal_code"
+socdev_friend_cmt,String,255,,Optional,"Friendships - Comment","",,"","Social Development and Play","ADI_2003_socdev_friend_cmt"
+socdev_csocdis,Integer,0,,Recommended,"Social disinhibtion - Current","0;1;2;3;8;9",,"","Social Development and Play","WPS_ADI_Q66,WPS_ADI_Q66C,SOCIAL_DISINHIBITION,ADI_R_Diagnostic_ADI_R_Raw_66a,q_66_soc_disinhibit_current_code,ADI_2003_socdev_csocdis"
+socdev_socdis5,Integer,0,,Recommended,"Social disinhibtion - Most Abnormal","0;1;2;3;8;9",,"","Social Development and Play","WPS_ADI_Q66E,ADI_R_Diagnostic_ADI_R_Raw_66,WPS_ADI_Q66MA,SOCIAL_DISINHIBITION_ABNRM,ADI_R_Diagnostic_ADI_R_Raw_66b,ADI_2003_socdev_socdis5,q_66_soc_disinhibit_most_abnormal_code"
+socdev_socdis_cmt,String,255,,Optional,"Social disinhibtion - Comment","",,"","Social Development and Play","ADI_2003_socdev_socdis_cmt"
+intbehav_cunproc,Integer,0,,Recommended,"Unusual preoccupations - Current","0;1;2;3;9;8",,"","Interests and Behaviors","WPS_ADI_Q67,ADI_R_Diagnostic_ADI_R_Raw_67a,WPS_ADI_Q67C,UNUSUAL_PREOCCUP_CURR,q_67_unusual_preoccupations_current_code,ADI_2003_intbehav_cunproc"
+intbehav_eunproc,Integer,0,,Recommended,"Unusual preoccupations - Ever","0;1;2;3;9;8",,"","Interests and Behaviors","WPS_ADI_Q67E,ADI_R_Diagnostic_ADI_R_Raw_67b,ADI_R_Diagnostic_ADI_R_Raw_67,UNUSUAL_PREOCCUP_EVER,ADI_2003_intbehav_eunproc,q_67_unusual_preoccupations_ever_code"
+intbehav_ccirint,Integer,0,,Recommended,"Circumscribed interests - Current","0;1;2;3;8;9",,"","Interests and Behaviors","WPS_ADI_Q68,ADI_R_Diagnostic_ADI_R_Raw_68a,WPS_ADI_Q68C,CIRCUMSCRIBE_CURR,ADI_2003_intbehav_ccirint,q_68_circumscr_ints_current_code"
+intbehav_ecirint,Integer,0,,Recommended,"Circumscribed interests - Ever","0;1;2;3;8;9",,"","Interests and Behaviors","WPS_ADI_Q68E,ADI_R_Diagnostic_ADI_R_Raw_68b,ADI_R_Diagnostic_ADI_R_Raw_68,CIRCUMSCRIBE_EVER,q_68_circumscr_ints_ever_code,ADI_2003_intbehav_ecirint"
+intbehav_cirint_cmt,String,255,,Optional,"Circumscribed interests - Comment","",,"","Interests and Behaviors","ADI_2003_intbehav_cirint_cmt"
+intbehav_cuseobj,Integer,0,,Recommended,"Repetitive use of objects or interest in parts of objects - Current","0;1;2;3;7;8;9",,"","Interests and Behaviors","WPS_ADI_Q69,ADI_R_Diagnostic_ADI_R_Raw_69a,WPS_ADI_Q69C,REPETITIVE_USE_OBJ_CURR,ADI_2003_intbehav_cuseobj,q_69_repet_use_objects_current_code"
+intbehav_euseobj,Integer,0,,Recommended,"Repetitive use of objects or interest in parts of objects - Ever","0;1;2;3;7;8;9",,"","Interests and Behaviors","ADI_R_Diagnostic_ADI_R_Raw_69b,ADI_R_Diagnostic_ADI_R_Raw_69,REPETITIVE_USE_OBJ_EVER,WPS_ADI_Q69E,q_69_repet_use_objects_ever_code,ADI_2003_intbehav_euseobj"
+intbehav_ccrit,Integer,0,,Recommended,"Compulsions/rituals - Current","0;1;2;3;9;8",,"","Interests and Behaviors","WPS_ADI_Q70,ADI_R_Diagnostic_ADI_R_Raw_70a,WPS_ADI_Q70C,RITUALS_CURR,ADI_2003_intbehav_ccrit,q_70_compulsions_rituals_current_code"
+intbehav_ecrit,Integer,0,,Recommended,"Compulsions/rituals - Ever","0;1;2;3;9;8",,"","Interests and Behaviors","WPS_ADI_Q70E,ADI_R_Diagnostic_ADI_R_Raw_70b,ADI_R_Diagnostic_ADI_R_Raw_70,RITUALS_EVER,q_70_compulsions_rituals_ever_code,ADI_2003_intbehav_ecrit"
+intbehav_crit_cmt,String,255,,Optional,"Compulsions/rituals - Comment","",,"","Interests and Behaviors","ADI_2003_intbehav_crit_cmt"
+intbehav_cunsens,Integer,0,,Recommended,"Unusual sensory interests - Current","0;1;2;9;8",,"","Interests and Behaviors","WPS_ADI_Q71,ADI_R_Diagnostic_ADI_R_Raw_71a,WPS_ADI_Q71C,UNUSUAL_SENSE_INTERST_CURR,ADI_2003_intbehav_cunsens,q_71_unusual_sens_ints_current_code"
+intbehav_eunsens,Integer,0,,Recommended,"Unusual sensory interests - Ever","0;1;2;9;8",,"","Interests and Behaviors","WPS_ADI_Q71E,ADI_R_Diagnostic_ADI_R_Raw_71b,ADI_R_Diagnostic_ADI_R_Raw_71,UNUSUAL_SENSE_INTERST_EVER,ADI_2003_intbehav_eunsens,q_71_unusual_sens_ints_ever_code"
+intbehav_unsens_cmt,String,255,,Optional,"Unusual sensory interests - Comment","",,"","Interests and Behaviors","ADI_2003_intbehav_unsens_cmt"
+intbehav_cnoise,Integer,0,,Recommended,"Undue general sensitivity to noise - Current","0;1;2;3;9;8",,"","Interests and Behaviors","WPS_ADI_Q72,ADI_R_Diagnostic_ADI_R_Raw_72a,WPS_ADI_Q72C,UNDUE_SENS_NOISE_CURR,ADI_2003_intbehav_cnoise,q_72_undo_gen_sens_noise_current_code"
+intbehav_enoise,Integer,0,,Recommended,"Undue general sensitivity to noise - Ever","0;1;2;3;9;8",,"","Interests and Behaviors","WPS_ADI_Q72E,ADI_R_Diagnostic_ADI_R_Raw_72b,ADI_R_Diagnostic_ADI_R_Raw_72,UNDUE_SENS_NOISE_EVER,ADI_2003_intbehav_enoise,q_72_undo_gen_sens_noise_ever_code"
+intbehav_cabinr,Integer,0,,Recommended,"Abnormal idiosyncratic negative response to specific sensory stimuli - Current","0;1;2;3;9;8",,"","Interests and Behaviors","WPS_ADI_Q73,ADI_R_Diagnostic_ADI_R_Raw_73a,WPS_ADI_Q73C,ABNORM_SENS_STIMULI_CURR,ADI_2003_intbehav_cabinr,q_73_idiosyncratic_current_code"
+intbehav_eabinr,Integer,0,,Recommended,"Abnormal idiosyncratic negative response to specific sensory stimuli - Ever","0;1;2;3;9;8",,"","Interests and Behaviors","WPS_ADI_Q73E,ADI_R_Diagnostic_ADI_R_Raw_73b,ADI_R_Diagnostic_ADI_R_Raw_73,ABNORM_SENS_STIMULI_EVER,q_73_idiosyncratic_ever_code,ADI_2003_intbehav_eabinr"
+intbehav_abinr_cmt,String,255,,Optional,"Abnormal idiosyncratic negative response to specific sensory stimuli - Comment","",,"","Interests and Behaviors","ADI_2003_intbehav_abinr_cmt"
+intbehav_cchange,Integer,0,,Recommended,"Difficulties with minor changes in subject's own routines or personal environment - Current","0;1;2;3;9;8",,"","Interests and Behaviors","WPS_ADI_Q74,ADI_R_Diagnostic_ADI_R_Raw_74a,WPS_ADI_Q74C,DIFF_CHANGE_ROUTE_CURR,ADI_2003_intbehav_cchange,q_74_diff_minor_changes_current_code"
+intbehav_echange,Integer,0,,Recommended,"Difficulties with minor changes in subject's own routines or personal environment - Ever","0;1;2;3;9;8",,"","Interests and Behaviors","WPS_ADI_Q74E,ADI_R_Diagnostic_ADI_R_Raw_74b,ADI_R_Diagnostic_ADI_R_Raw_74,DIFF_CHANGE_ROUTE_EVER,ADI_2003_intbehav_echange,q_74_diff_minor_changes_ever_code"
+intbehav_change_cmt,String,255,,Optional,"Difficulties with minor changes in subject's own routines or personal environment - Comment","",,"","Interests and Behaviors","ADI_2003_intbehav_change_cmt"
+intbehav_cresis,Integer,0,,Recommended,"Resistance to trivial changes in the environment(not directly affecting the subject) - Current","0;1;2;3;9;8",,"","Interests and Behaviors","WPS_ADI_Q75,ADI_R_Diagnostic_ADI_R_Raw_75a,WPS_ADI_Q75C,RESIST_CHANGE_CURR,ADI_2003_intbehav_cresis,q_75_resist_trivial_chng_current_code"
+intbehav_eresis,Integer,0,,Recommended,"Resistance to trivial changes in the environment(not directly affecting the subject) - Ever","0;1;2;3;9;8",,"","Interests and Behaviors","ADI_R_Diagnostic_ADI_R_Raw_75b,ADI_R_Diagnostic_ADI_R_Raw_75,RESIST_CHANGE_EVER,WPS_ADI_Q75E,q_75_resist_trivial_chng_ever_code,ADI_2003_intbehav_eresis"
+intbehav_resis_cmt,String,255,,Optional,"Resistance to trivial changes in the environment(not directly affecting the subject) - Comment","",,"","Interests and Behaviors","ADI_2003_intbehav_resis_cmt"
+intbehav_cuatt,Integer,0,,Recommended,"Unusual attachment to objects - Current","0;1;2;3;6;7;9;8",,"","Interests and Behaviors","WPS_ADI_Q76,WPS_ADI_Q76C,UNUSUAL_ATTACH_OBJ_CURR,ADI_R_Diagnostic_ADI_R_Raw_76a,ADI_2003_intbehav_cuatt,q_76_unus_attach_objects_current_code"
+intbehav_euatt,Integer,0,,Recommended,"Unusual attachment to objects - Ever","0;1;2;3;6;7;9;8",,"","Interests and Behaviors","ADI_R_Diagnostic_ADI_R_Raw_76,UNUSUAL_ATTACH_OBJ_EVER,ADI_R_Diagnostic_ADI_R_Raw_76b,WPS_ADI_Q76E,ADI_2003_intbehav_euatt,q_76_unus_attach_objects_ever_code"
+intbehav_euatt_cmt,String,255,,Optional,"Unusual attachment to objects - Comment","",,"","Interests and Behaviors","ADI_2003_intbehav_euatt_cmt"
+intbehav_chfman,Integer,0,,Recommended,"Hand and finger mannerisms - Current","0;1;2;3;8;9",,"","Interests and Behaviors","WPS_ADI_Q77,ADI_R_Diagnostic_ADI_R_Raw_77a,WPS_ADI_Q77C,HAND_MANNER_CURR,ADI_2003_intbehav_chfman,q_77_hands_finger_manners_current_code"
+intbehav_ehfman,Integer,0,,Recommended,"Hand and finger mannerisms - Ever","0;1;2;3;8;9",,"","Interests and Behaviors","WPS_ADI_Q77E,ADI_R_Diagnostic_ADI_R_Raw_77b,ADI_R_Diagnostic_ADI_R_Raw_77,HAND_MANNER_EVER,ADI_2003_intbehav_ehfman,q_77_hands_finger_manners_ever_code"
+intbehav_hfman_cmt,String,255,,Optional,"Hand and finger mannerisms - Comment","",,"","Interests and Behaviors","ADI_2003_intbehav_hfman_cmt"
+intbehav_cothman,Integer,0,,Recommended,"Other complex mannerisms or stereotyped body movements (Do not include isolated rocking) - Current","0;1;2;3;8;9",,"","Interests and Behaviors","WPS_ADI_Q78,ADI_R_Diagnostic_ADI_R_Raw_78a,WPS_ADI_Q78C,STEREOTYPE_MOVE_CURR,q_78_oth_complex_manners_current_code,ADI_2003_intbehav_cothman"
+intbehav_eothman,Integer,0,,Recommended,"Other complex mannerisms or stereotyped body movements (Do not include isolated rocking) - Ever","0;1;2;3;8;9",,"","Interests and Behaviors","WPS_ADI_Q78E,ADI_R_Diagnostic_ADI_R_Raw_78b,ADI_R_Diagnostic_ADI_R_Raw_78,STEREOTYPE_MOVE_EVER,ADI_2003_intbehav_eothman,q_78_oth_complex_manners_ever_code"
+intbehav_othman_cmt,String,255,,Optional,"Other complex mannerisms or stereotyped body movements (Do not include isolated rocking) - Comment","",,"","Interests and Behaviors","ADI_2003_intbehav_othman_cmt"
+intbehav_cmlhand,Integer,0,,Recommended,"Midline hand movements - Current","0;1;2;8;9",,"","Interests and Behaviors","WPS_ADI_Q79,ADI_R_Diagnostic_ADI_R_Raw_79a,WPS_ADI_Q79C,MIDLINE_HAND_MOVE_CURR,q_79_midline_hand_moves_current_code,ADI_2003_intbehav_cmlhand"
+intbehav_emlhand,Integer,0,,Recommended,"Midline hand movements - Ever","0;1;2;8;9",,"","Interests and Behaviors","WPS_ADI_Q79E,ADI_R_Diagnostic_ADI_R_Raw_79b,ADI_R_Diagnostic_ADI_R_Raw_79,MIDLINE_HAND_MOVE_EVER,q_79_midline_hand_moves_ever_code,ADI_2003_intbehav_emlhand"
+genbehav_cgait,Integer,0,,Recommended,"Gait - Current","0;1;2;3;7;8;9",,"","General Behaviors","WPS_ADI_Q80,ADI_R_Diagnostic_ADI_R_Raw_80a,WPS_ADI_Q80C,GAIT_CURR,q_80_gait_current_code,ADI_2003_genbehav_cgait"
+genbehav_gait5,Integer,0,,Recommended,"Gait - Most Abnormal","0;1;2;3;7;8;9",,"","General Behaviors","WPS_ADI_Q80E,ADI_R_Diagnostic_ADI_R_Raw_80b,ADI_R_Diagnostic_ADI_R_Raw_80,WPS_ADI_Q80MA,GAIT_ABNRM,q_80_gait_most_abnormal_code,ADI_2003_genbehav_gait5"
+genbehav_gait_cmt,String,255,,Optional,"Gait - Comment","",,"","General Behaviors","ADI_2003_genbehav_gait_cmt"
+genbehav_caggfam,Integer,0,,Recommended,"Aggression to caregivers or family members - Current","0;1;2;3;9;8",,"","General Behaviors","WPS_ADI_Q81,ADI_R_Diagnostic_ADI_R_Raw_81a,WPS_ADI_Q81C,AGGRESS_CURR,q_81_aggress_caregivers_current_code,ADI_2003_genbehav_caggfam"
+genbehav_eaggfam,Integer,0,,Recommended,"Aggression to caregivers or family members - Ever","0;1;2;3;9;8",,"","General Behaviors","ADI_R_Diagnostic_ADI_R_Raw_81b,ADI_R_Diagnostic_ADI_R_Raw_81,AGGRESS_EVER,WPS_ADI_Q81E,q_81_aggress_caregivers_ever_code,ADI_2003_genbehav_eaggfam"
+genbehav_aggfam_cmt,String,255,,Optional,"Aggression to caregivers or family members - Comment","",,"","General Behaviors","ADI_2003_genbehav_aggfam_cmt"
+genbehav_caggoth,Integer,0,,Recommended,"Aggression to non-caregivers or non-family members - Current","0;1;2;3;9;8",,"","General Behaviors","WPS_ADI_Q82,ADI_R_Diagnostic_ADI_R_Raw_82a,WPS_ADI_Q82C,AGGRESS_OTHERS_CURR,ADI_2003_genbehav_caggoth,q_82_aggress_noncaregivers_current_code"
+genbehav_eaggoth,Integer,0,,Recommended,"Aggression to non-caregivers or non-family members - Ever","0;1;2;3;9;8",,"","General Behaviors","ADI_R_Diagnostic_ADI_R_Raw_82b,ADI_R_Diagnostic_ADI_R_Raw_82,AGGRESS_OTHERS_EVER,WPS_ADI_Q82E,q_82_aggress_noncaregivers_ever_code,ADI_2003_genbehav_eaggoth"
+genbehav_aggoth_cmt,String,255,,Optional,"Aggression to non-caregivers or non-family members - Comment","",,"","General Behaviors","ADI_2003_genbehav_aggoth_cmt"
+genbehav_cslfinj,Integer,0,,Recommended,"Self Injury - Current","0;1;2;3;9;8",,"","General Behaviors","WPS_ADI_Q83,ADI_R_Diagnostic_ADI_R_Raw_83a,WPS_ADI_Q83C,SELF_INJURY_CURR,ADI_2003_genbehav_cslfinj,q_83_self_injury_current_code"
+genbehav_eslfinj,Integer,0,,Recommended,"Self Injury - Ever","0;1;2;3;9;8",,"","General Behaviors","WPS_ADI_Q83E,ADI_R_Diagnostic_ADI_R_Raw_83b,ADI_R_Diagnostic_ADI_R_Raw_83,SELF_INJURY_EVER,ADI_2003_genbehav_eslfinj,q_83_self_injury_ever_code"
+genbehav_slfinj_cmt,String,255,,Optional,"Self Injury - Comment","",,"","General Behaviors","ADI_2003_genbehav_slfinj_cmt"
+genbehav_chvent,Integer,0,,Recommended,"Hyperventilation - Current","0;1;2;9;8",,"","General Behaviors","WPS_ADI_Q84,ADI_R_Diagnostic_ADI_R_Raw_84a,WPS_ADI_Q84C,HYPERVENT_CURR,ADI_2003_genbehav_chvent,q_84_hyperventilation_current_code"
+genbehav_ehvent,Integer,0,,Recommended,"Hyperventilation - Ever","0;1;2;9;8",,"","General Behaviors","ADI_R_Diagnostic_ADI_R_Raw_84b,ADI_R_Diagnostic_ADI_R_Raw_84,HYPERVENT_EVER,WPS_ADI_Q84E,ADI_2003_genbehav_ehvent,q_84_hyperventilation_ever_code"
+genbehav_cfaint,Integer,0,,Recommended,"Faints/Fits/Blackouts - Current","0;1;2;7;9;8",,"","General Behaviors","WPS_ADI_Q85,ADI_R_Diagnostic_ADI_R_Raw_85a,WPS_ADI_Q85C,FAINT_CURR,q_85_faints_fits_blackouts_current_code,ADI_2003_genbehav_cfaint"
+genbehav_efaint,Integer,0,,Recommended,"Faints/Fits/Blackouts - Ever","0;1;2;7;9;8",,"","General Behaviors","WPS_ADI_Q85E,ADI_R_Diagnostic_ADI_R_Raw_85b,ADI_R_Diagnostic_ADI_R_Raw_85,FAINT_EVER,ADI_2003_genbehav_efaint,q_85_faints_fits_blackouts_ever_code"
+genbehav_faint_cmt,String,255,,Optional,"Faints/Fits/Blackouts - Comment","",,"","General Behaviors","Adi_R_Diagnostic_ADI_R_Faints,ADI_2003_genbehav_faint_cmt"
+genbehav_ageabn,Integer,0,,Recommended,"Age when abnormality first evident","0;1;2;3;4;9",,"","General Behaviors","WPS_ADI_Q86,ADI_R_Diagnostic_ADI_R_Raw_86,ABNORM_AGE,q_86_age_when_abnormality_first_evident,ADI_2003_genbehav_ageabn"
+genbehav_judgage,Integer,0,,Recommended,"Interviewer's judgment on age when developmental abnormalities probably first manifest (Code in months)","0 to 1200",,"","General Behaviors","WPS_ADI_Q87,ADI_R_Diagnostic_ADI_R_Raw_87,JUDGE_AGE,q_87_interviewers_judgment,ADI_2003_genbehav_judgage"
+genbehav_cvisspz,Integer,0,,Recommended,"Visuospatial ability (i.e. In puzzles, jigsaws, shapes, patterns, etc.) - Current","0;1;2;7;8;9",,"","General Behaviors","WPS_ADI_Q88,ADI_R_Diagnostic_ADI_R_Raw_88a,WPS_ADI_Q88C,VISUOSPATIAL_ABLE_CURR,ADI_2003_genbehav_cvisspz,q_88_visuospatial_ability_current_code"
+genbehav_evisspz,Integer,0,,Recommended,"Visuospatial ability (i.e. In puzzles, jigsaws, shapes, patterns, etc.) - Ever","0;1;2;7;8;9",,"","General Behaviors","WPS_ADI_Q88E,ADI_R_Diagnostic_ADI_R_Raw_88b,ADI_R_Diagnostic_ADI_R_Raw_88,VISUOSPATIAL_ABLE_EVER,ADI_2003_genbehav_evisspz,q_88_visuospatial_ability_ever_code"
+genbehav_cmemz,Integer,0,,Recommended,"Memory Skill (accurate memory for detail, as of dates or timetables) - Current","0;1;2;7;8;9",,"","General Behaviors","WPS_ADI_Q89,ADI_R_Diagnostic_ADI_R_Raw_89a,WPS_ADI_Q89C,MEMORY_SKILL_CURR,q_89_memory_still_current_code,ADI_2003_genbehav_cmemz"
+genbehav_ememz,Integer,0,,Recommended,"Memory Skill (accurate memory for detail, as of dates or timetables) - Ever","0;1;2;7;8;9",,"","General Behaviors","ADI_R_Diagnostic_ADI_R_Raw_89b,ADI_R_Diagnostic_ADI_R_Raw_89,MEMORY_SKILL_EVER,WPS_ADI_Q89E,ADI_2003_genbehav_ememz,q_89_memory_still_ever_code"
+genbehav_cmusicz,Integer,0,,Recommended,"Musical ability (recognition, composition, absolute pitch or performance) - Current","0;1;2;7;8;9",,"","General Behaviors","ADI_R_Diagnostic_ADI_R_Raw_90a,WPS_ADI_Q90C,MUSIC_CURR,WPS_ADI_Q90,ADI_2003_genbehav_cmusicz,q_90_musical_ability_current_code"
+genbehav_emusicz,Integer,0,,Recommended,"Musical ability(recognition, composition, absolute pitch or performance) - Ever","0;1;2;7;8;9",,"","General Behaviors","WPS_ADI_Q90E,ADI_R_Diagnostic_ADI_R_Raw_90b,ADI_R_Diagnostic_ADI_R_Raw_90,MUSIC_EVER,q_90_musical_ability_ever_code,ADI_2003_genbehav_emusicz"
+genbehav_cdrawz,Integer,0,,Recommended,"Drawing Skill (unusually skilled use of perspective or creative approach) - Current","0;1;2;7;8;9",,"","General Behaviors","ADI_R_Diagnostic_ADI_R_Raw_91a,WPS_ADI_Q91C,DRAW_CURR,WPS_ADI_Q91,q_91_drawings_skill_current_code,ADI_2003_genbehav_cdrawz"
+genbehav_edrawz,Integer,0,,Recommended,"Drawing Skill (unusually skilled use of perspective or creative approach) - Ever","0;1;2;7;8;9",,"","General Behaviors","WPS_ADI_Q91E,ADI_R_Diagnostic_ADI_R_Raw_91b,ADI_R_Diagnostic_ADI_R_Raw_91,DRAW_EVER,q_91_drawings_skill_ever_code,ADI_2003_genbehav_edrawz"
+genbehav_creadz,Integer,0,,Recommended,"Reading ability (e.g. early sight reading) - Current","0;1;2;7;8;9",,"","General Behaviors","ADI_R_Diagnostic_ADI_R_Raw_92a,WPS_ADI_Q92C,READ_CURR,WPS_ADI_Q92,ADI_2003_genbehav_creadz,q_92_reading_ability_current_code"
+genbehav_ereadz,Integer,0,,Recommended,"Reading ability (e.g. early sight reading) - Ever","0;1;2;7;8;9",,"","General Behaviors","WPS_ADI_Q92E,ADI_R_Diagnostic_ADI_R_Raw_92b,ADI_R_Diagnostic_ADI_R_Raw_92,READ_EVER,q_92_reading_ability_ever_code,ADI_2003_genbehav_ereadz"
+genbehav_ccompuz,Integer,0,,Recommended,"Computational ability (e.g. mental arithmetic) - Current","0;1;2;7;8;9",,"","General Behaviors","ADI_R_Diagnostic_ADI_R_Raw_93a,WPS_ADI_Q93C,COMPUTATIONAL_CURR,WPS_ADI_Q93,ADI_2003_genbehav_ccompuz,q_93_computational_ability_current_code"
+genbehav_ecompuz,Integer,0,,Recommended,"Computational ability (e.g. mental arithmetic) - Ever","0;1;2;7;8;9",,"","General Behaviors","WPS_ADI_Q93E,ADI_R_Diagnostic_ADI_R_Raw_93b,ADI_R_Diagnostic_ADI_R_Raw_93,COMPUTATIONAL_EVER,q_93_computational_ability_ever_code,ADI_2003_genbehav_ecompuz"
+subject_verbal,String,4,,Required,"Is the subject verbal? Determines if dbaes_bnvtotal or dbaes_bvtotal should be populated.","Yes;No",,"If Yes, then dbaes_bvtotal should not be null, else dbaes_bnvtotal should not be null.","",""
+dbaes_atotal,Integer,0,,Required,"Total for Section A: Qualitative Abnormalities in Reciprocal Social Interaction","",,"","Diagnostic Behavior Algorithm (entered scores)","WPS_ADI_Algorithm_Atotal,Adi_R_Diagnostic_A_Total,ADI_2003_dbaes_atotal,A_Total"
+dbaes_bnvtotal,Integer,0,,Conditional,"Total of Section B - Non-Verbal: Qualitative Abnormalities in Communication","",,"","Diagnostic Behavior Algorithm (entered scores)","WPS_ADI_Algorithm_Bnvtotal,Adi_R_Diagnostic_B_NV_Total,ADI_2003_dbaes_bnvtotal,BNV_Total"
+dbaes_bvtotal,Integer,0,,Conditional,"Total of Section B - Verbal: Qualitative Abnormalities in Communication","",,"","Diagnostic Behavior Algorithm (entered scores)","WPS_ADI_Algorithm_Bvtotal,Adi_R_Diagnostic_B_V_Total,ADI_2003_dbaes_bvtotal,BV_Total"
+dbaes_ctotal,Integer,0,,Required,"Total of Section C: Restricted, Repetitive, and Stereotyped Patterns of Behavior","",,"","Diagnostic Behavior Algorithm (entered scores)","WPS_ADI_Algorithm_Ctotal,Adi_R_Diagnostic_C_Total,ADI_2003_dbaes_ctotal,C_Total"
+dbaes_dtotal,Integer,0,,Required,"Total of Section D","",,"","Diagnostic Behavior Algorithm (entered scores)","WPS_ADI_Algor,WPS_ADI_Algorithm_Dtotal,Adi_R_Diagnostic_D_Total,ADI_2003_dbaes_dtotal,D_Total"
+dbaes_a1gaze_code,Integer,0,,Recommended,"Direct Gaze - Code","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_a1gaze_code"
+dbaes_a1gaze,Integer,0,,Recommended,"Direct Gaze - Score","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_a1gaze"
+dbaes_a1ssmile_code,Integer,0,,Recommended,"Social Smiling - Code","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_a1ssmile_code"
+dbaes_a1ssmile,Integer,0,,Recommended,"Social Smiling - Score","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_a1ssmile"
+dbaes_a1rfacex_code,Integer,0,,Recommended,"Range of facial expressions used to communicate - Code","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_a1rfacex_code"
+dbaes_a1rfacex,Integer,0,,Recommended,"Range of facial expressions used to communicate - Score","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_a1rfacex"
+dbaes_a1,Integer,0,,Recommended,"Failure to use nonverbal behaviors to regulate social interaction - Total A1","",,"","Diagnostic Behavior Algorithm (entered scores)","WPS_ADI_Algorithm_A1total,Adi_R_Diagnostic_Total_A1,ADI_2003_dbaes_a1,Total_A1"
+dbaes_a2peerpl_code,Integer,0,,Recommended,"Imaginative play with peers (over 4 yrs. only) - Code","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_a2peerpl_code"
+dbaes_a2peerpl,Integer,0,,Recommended,"Imaginative play with peers (over 4 yrs. only) - Score","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_a2peerpl"
+dbaes_a2intch_code,Integer,0,,Recommended,"Interest in Children - Code","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_a2intch_code"
+dbaes_a2intch,Integer,0,,Recommended,"Interest in Children - Score","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_a2intch"
+dbaes_a2respch_code,Integer,0,,Recommended,"Response to other children's approaches - Code","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_a2respch_code"
+dbaes_a2respch,Integer,0,,Recommended,"Response to other children's approaches - Score","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_a2respch"
+dbaes_a2grplay_code,Integer,0,,Recommended,"Group play with peers (CA 4 - 10 yrs.) or Friends (CA 10 - 15 yrs.) - Code","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_a2grplay_code"
+dbaes_a2friend_code,Integer,0,,Recommended,"Friendships - Code","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_a2friend_code"
+dbaes_a2grplay_friend,Integer,0,,Recommended,"Group play with peers or Friends OR Friendships (record higher score)","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_a2grplay_friend"
+dbaes_a2,Integer,0,,Recommended,"Failure to develop peer relationships - Total A2","",,"","Diagnostic Behavior Algorithm (entered scores)","Adi_R_Diagnostic_Total_A2,WPS_ADI_Algorithm_A2total,ADI_2003_dbaes_a2,Total_A2"
+dbaes_a3show_code,Integer,0,,Recommended,"Showing and directing attention - Code","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_a3show_code"
+dbaes_a3show,Integer,0,,Recommended,"Showing and directing attention - Score","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_a3show"
+dbaes_a3oshare_code,Integer,0,,Recommended,"Offering to share - Code","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_a3oshare_code"
+dbaes_a3oshare,Integer,0,,Recommended,"Offering to share - Score","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_a3oshare"
+dbaes_a3share_code,Integer,0,,Recommended,"Seeking to share own enjoyment with others - Code","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_a3share_code"
+dbaes_a3share,Integer,0,,Recommended,"Seeking to share own enjoyment with others - Score","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_a3share"
+dbaes_a3,Integer,0,,Recommended,"Lack of shared enjoyment - Total A3","",,"","Diagnostic Behavior Algorithm (entered scores)","WPS_ADI_Algorithm_A3total,Adi_R_Diagnostic_Total_A3,ADI_2003_dbaes_a3,Total_A3"
+dbaes_a4usebod_code,Integer,0,,Recommended,"Use of other's body (Score Ever) - Code","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_a4usebod_code"
+dbaes_a4usebod,Integer,0,,Recommended,"Use of other's body (Score Ever) - Score","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_a4usebod"
+dbaes_a4ocomf_code,Integer,0,,Recommended,"Offers comfort - Code","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_a4ocomf_code"
+dbaes_a4ocomf,Integer,0,,Recommended,"Offers comfort - Score","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_a4ocomf"
+dbaes_a4qualov_code,Integer,0,,Recommended,"Quality of social overtures - Code","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_a4qualov_code"
+dbaes_a4qualov,Integer,0,,Recommended,"Quality of social overtures - Score","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_a4qualov"
+dbaes_a4inapfe_code,Integer,0,,Recommended,"Inappropriate facial expressions (Score Ever) - Code","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_a4inapfe_code"
+dbaes_a4inapfe,Integer,0,,Recommended,"Inappropriate facial expressions (Score Ever) - Score","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_a4inapfe"
+dbaes_a4resp_code,Integer,0,,Recommended,"Appropriateness of social response - Code","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_a4resp_code"
+dbaes_a4resp,Integer,0,,Recommended,"Appropriateness of social response - Score","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_a4resp"
+dbaes_a4,Integer,0,,Recommended,"Lack of socioemotional reciprocity - Total A4","",,"","Diagnostic Behavior Algorithm (entered scores)","WPS_ADI_Algorithm_A4total,Adi_R_Diagnostic_Total_A4,ADI_2003_dbaes_a4,Total_A4"
+dbaes_b1point_code,Integer,0,,Recommended,"Pointing to express interest - Code","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_b1point_code"
+dbaes_b1point,Integer,0,,Recommended,"Pointing to express interest - Score","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_b1point"
+dbaes_b1nod_code,Integer,0,,Recommended,"Nodding - Code","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_b1nod_code"
+dbaes_b1nod,Integer,0,,Recommended,"Nodding - Score","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_b1nod"
+dbaes_b1hshake_code,Integer,0,,Recommended,"Headshaking - Code","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_b1hshake_code"
+dbaes_b1hshake,Integer,0,,Recommended,"Headshaking - Score","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_b1hshake"
+dbaes_b1insges_code,Integer,0,,Recommended,"Conventional instrumental gestures - Code","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_b1insges_code"
+dbaes_b1insges,Integer,0,,Recommended,"Conventional instrumental gestures - Score","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_b1insges"
+dbaes_b1,Integer,0,,Recommended,"Lack of, or delay in, spoken language and failure to compensate through gesture - Total B1","",,"","Diagnostic Behavior Algorithm (entered scores)","WPS_ADI_Algorithm_B1total,Adi_R_Diagnostic_Total_B1,ADI_2003_dbaes_b1,Total_B1"
+dbaes_b2chat_code,Integer,0,,Recommended,"Social Verbalization/Chat (Verbal Subjects Only) - Code","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_b2chat_code"
+dbaes_b2chat,Integer,0,,Recommended,"Social Verbalization/Chat (Verbal Subjects Only) - Score","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_b2chat"
+dbaes_b2conver_code,Integer,0,,Recommended,"Reciprocal conversation (Verbal Subjects Only) - Code","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_b2conver_code"
+dbaes_b2conver,Integer,0,,Recommended,"Reciprocal conversation (Verbal Subjects Only) - Score","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_b2conver"
+dbaes_b2,Integer,0,,Recommended,"Relative failure to initiate or sustain conversational interchange - Total B2(V)","",,"","Diagnostic Behavior Algorithm (entered scores)","WPS_ADI_Algorithm_B2vtotal,Adi_R_Diagnostic_Total_B2,ADI_2003_dbaes_b2,Total_B2V"
+dbaes_b3stereo_code,Integer,0,,Recommended,"Stereotyped utterances and Delayed Echolalia (Score Ever) - Code","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_b3stereo_code"
+dbaes_b3stereo,Integer,0,,Recommended,"Stereotyped utterances and Delayed Echolalia (Score Ever) - Score","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_b3stereo"
+dbaes_b3inappq_code,Integer,0,,Recommended,"Inappropriate questions (Score Ever) - Code","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_b3inappq_code"
+dbaes_b3inappq,Integer,0,,Recommended,"Inappropriate questions (Score Ever) - Score","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_b3inappq"
+dbaes_b3pron_code,Integer,0,,Recommended,"Pronominal reversal (Score Ever) - Code","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_b3pron_code"
+dbaes_b3pron,Integer,0,,Recommended,"Pronominal reversal (Score Ever) - Score","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_b3pron"
+dbaes_b3neoid_code,Integer,0,,Recommended,"Neologisms/idiosyncratic language (Score Ever) - Code","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_b3neoid_code"
+dbaes_b3neoid,Integer,0,,Recommended,"Neologisms/idiosyncratic language (Score Ever) - Score","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_b3neoid"
+dbaes_b3,Integer,0,,Recommended,"Stereotyped, repetitive, or idiosyncratic speech - Total B3(V)","",,"","Diagnostic Behavior Algorithm (entered scores)","WPS_ADI_Algorithm_B3vtotal,Adi_R_Diagnostic_Total_B3,ADI_2003_dbaes_b3,Total_B3V"
+dbaes_b4imit_code,Integer,0,,Recommended,"Spontaneous imitation of actions - Code","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_b4imit_code"
+dbaes_b4imit,Integer,0,,Recommended,"Spontaneous imitation of actions - Score","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_b4imit"
+dbaes_b4play_code,Integer,0,,Recommended,"Imaginative play - Code","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_b4play_code"
+dbaes_b4play,Integer,0,,Recommended,"Imaginative play - Score","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_b4play"
+dbaes_b4soplay_code,Integer,0,,Recommended,"Imitative social play - Code","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_b4soplay_code"
+dbaes_b4soplay,Integer,0,,Recommended,"Imitative social play - Score","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_b4soplay"
+dbaes_b4,Integer,0,,Recommended,"Lack of varied spontaneous make-believe or social imitative play","",,"","Diagnostic Behavior Algorithm (entered scores)","WPS_ADI_Algorithm_B4total,Adi_R_Diagnostic_Total_B4,ADI_2003_dbaes_b4,Total_B4"
+dbaes_c1unproc_code,Integer,0,,Recommended,"Unusual preoccupations - Code","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_c1unproc_code"
+dbaes_c1unproc,Integer,0,,Recommended,"Unusual preoccupations - Score","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_c1unproc"
+dbaes_c1cirint_code,Integer,0,,Recommended,"Circumscribed interests (4 years and over) - Code","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_c1cirint_code"
+dbaes_c1cirint,Integer,0,,Recommended,"Circumscribed interests (4 years and over) - Score","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_c1cirint"
+dbaes_c1,Integer,0,,Recommended,"Encompassing preoccupation or circumscribed pattern of interest - Total C1","",,"","Diagnostic Behavior Algorithm (entered scores)","Adi_R_Diagnostic_Total_C1,WPS_ADI_Algorithm_C1total,ADI_2003_dbaes_c1,Total_C1"
+dbaes_c2verrit_code,Integer,0,,Recommended,"Verbal rituals - Code","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_c2verrit_code"
+dbaes_c2verrit,Integer,0,,Recommended,"Verbal rituals - Score","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_c2verrit"
+dbaes_c2crit_code,Integer,0,,Recommended,"Compulsions/rituals - Code","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_c2crit_code"
+dbaes_c2crit,Integer,0,,Recommended,"Compulsions/rituals - Score","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_c2crit"
+dbaes_c2,Integer,0,,Recommended,"Apparently compulsive adherence to nonfunctional routines or rituals - Total C2","",,"","Diagnostic Behavior Algorithm (entered scores)","WPS_ADI_Algorithm_C2total,Adi_R_Diagnostic_Total_C2,ADI_2003_dbaes_c2,Total_C2"
+dbaes_c3hfman_code,Integer,0,,Recommended,"Hand and finger mannerisms - Code","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_c3hfman_code"
+dbaes_c3othman_code,Integer,0,,Recommended,"Other Complex mannerisms or sterotyped Body Movements - Code","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_c3othman_code"
+dbaes_c3hfman_othman,Integer,0,,Recommended,"Hand and finger mannerisms OR Complex mannerisms (record higher score)","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_c3hfman_othman"
+dbaes_c3,Integer,0,,Recommended,"Stereotyped and repetitive motor mannerisms - Total C3","",,"","Diagnostic Behavior Algorithm (entered scores)","Adi_R_Diagnostic_Total_C3,WPS_ADI_Algorithm_C3total,ADI_2003_dbaes_c3,Total_C3"
+dbaes_c4useobj_code,Integer,0,,Recommended,"Repetitive use of objects - Code","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_c4useobj_code"
+dbaes_c4unsens_code,Integer,0,,Recommended,"Unusual sensory interests - Code","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_c4unsens_code"
+dbaes_c4useobj_unsens,Integer,0,,Recommended,"Repetitive use of objects OR Unusual sensory interests (record higher score)","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_c4useobj_unsens"
+dbaes_c4,Integer,0,,Recommended,"Preoccupations with part of objects or nonfunctional elements of material - Total C4","",,"","Diagnostic Behavior Algorithm (entered scores)","Adi_R_Diagnostic_Total_C4,WPS_ADI_Algorithm_C4total,ADI_2003_dbaes_c4,Total_C4"
+dbaes_dacon_code,Integer,0,,Recommended,"Age when parents first noticed - Code","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_dacon_code"
+dbaes_dacon,Integer,0,,Recommended,"Age when parents first noticed - Score","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_dacon"
+dbaes_daword_code,Integer,0,,Recommended,"Age of first single words - Code","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_daword_code"
+dbaes_daword,Integer,0,,Recommended,"Age of first single words - Score","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_daword"
+dbaes_daphrase_code,Integer,0,,Recommended,"Age of first phrases - Code","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_daphrase_code"
+dbaes_daphrase,Integer,0,,Recommended,"Age of first phrases - Score","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_daphrase"
+dbaes_dageabn_code,Integer,0,,Recommended,"Age when abnormality first evident - Code","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_dageabn_code"
+dbaes_dageabn,Integer,0,,Recommended,"Age when abnormality first evident - Score","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_dageabn"
+dbaes_djudgage_code,Integer,0,,Recommended,"Interviewer's judgment on age when abnormalities probably first manifest - Code in months","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_djudgage_code"
+dbaes_djudgage,Integer,0,,Recommended,"Interviewer's judgment on age when abnormalities probably first manifest - Score","",,"","Diagnostic Behavior Algorithm (entered scores)","ADI_2003_dbaes_djudgage"
+cbaes_a1gaze_code,Integer,0,,Recommended,"Direct Gaze - Code","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_a1gaze_code"
+cbaes_a1gaze,Integer,0,,Recommended,"Direct Gaze - Score","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_a1gaze"
+cbaes_a1ssmile_code,Integer,0,,Recommended,"Social Smiling - Code","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_a1ssmile_code"
+cbaes_a1ssmile,Integer,0,,Recommended,"Social Smiling - Score","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_a1ssmile"
+cbaes_a1rfacex_code,Integer,0,,Recommended,"Range of facial expressions used to communicate - Code","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_a1rfacex_code"
+cbaes_a1rfacex,Integer,0,,Recommended,"Range of facial expressions used to communicate - Score","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_a1rfacex"
+cbaes_a1,Integer,0,,Recommended,"Failure to use nonverbal behaviors to regulate social interaction","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_a1"
+cbaes_a2peerpl_code,Integer,0,,Recommended,"Imaginative play with peers (over 4 yrs. only) - Code","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_a2peerpl_code"
+cbaes_a2peerpl,Integer,0,,Recommended,"Imaginative play with peers (over 4 yrs. only) - Score","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_a2peerpl"
+cbaes_a2intch_code,Integer,0,,Recommended,"Interest in Children - Code","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_a2intch_code"
+cbaes_a2intch,Integer,0,,Recommended,"Interest in Children - Score","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_a2intch"
+cbaes_a2respch_code,Integer,0,,Recommended,"Response to other children's approaches - Code","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_a2respch_code"
+cbaes_a2respch,Integer,0,,Recommended,"Response to other children's approaches - Score","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_a2respch"
+cbaes_a2grplay_code,Integer,0,,Recommended,"Group play with peers (CA 4 - 10 yrs.) or Friends (CA 10 - 15 yrs.) - Code","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_a2grplay_code"
+cbaes_a2grplay,Integer,0,,Recommended,"Group play with peers (CA 4 - 10 yrs.) or Friends (CA 10 - 15 yrs.) - Score","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_a2grplay"
+cbaes_a2friend_code,Integer,0,,Recommended,"Friendships - Code","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_a2friend_code"
+cbaes_a2friend,Integer,0,,Recommended,"Friendships - Score","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_a2friend"
+cbaes_a2,Integer,0,,Recommended,"Failure to develop peer relationships","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_a2"
+cbaes_a3show_code,Integer,0,,Recommended,"Showing and directing attention - Code","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_a3show_code"
+cbaes_a3show,Integer,0,,Recommended,"Showing and directing attention - Score","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_a3show"
+cbaes_a3oshare_code,Integer,0,,Recommended,"Offering to share - Code","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_a3oshare_code"
+cbaes_a3oshare,Integer,0,,Recommended,"Offering to share - Score","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_a3oshare"
+cbaes_a3share_code,Integer,0,,Recommended,"Seeking to share own enjoyment with others - Code","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_a3share_code"
+cbaes_a3share,Integer,0,,Recommended,"Seeking to share own enjoyment with others - Score","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_a3share"
+cbaes_a3,Integer,0,,Recommended,"Lack of shared enjoyment","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_a3"
+cbaes_a4usebod_code,Integer,0,,Recommended,"Use of other's body (Score Ever) - Code","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_a4usebod_code"
+cbaes_a4usebod,Integer,0,,Recommended,"Use of other's body (Score Ever) - Score","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_a4usebod"
+cbaes_a4ocomf_code,Integer,0,,Recommended,"Offers comfort - Code","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_a4ocomf_code"
+cbaes_a4ocomf,Integer,0,,Recommended,"Offers comfort - Score","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_a4ocomf"
+cbaes_a4qualov_code,Integer,0,,Recommended,"Quality of social overtures - Code","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_a4qualov_code"
+cbaes_a4qualov,Integer,0,,Recommended,"Quality of social overtures - Score","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_a4qualov"
+cbaes_a4inapfe_code,Integer,0,,Recommended,"Inappropriate facial expressions (Score Ever) - Code","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_a4inapfe_code"
+cbaes_a4inapfe,Integer,0,,Recommended,"Inappropriate facial expressions (Score Ever) - Score","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_a4inapfe"
+cbaes_a4resp_code,Integer,0,,Recommended,"Appropriateness of social response - Code","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_a4resp_code"
+cbaes_a4resp,Integer,0,,Recommended,"Appropriateness of social response - Score","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_a4resp"
+cbaes_a4,Integer,0,,Recommended,"Lack of socioemotional reciprocity","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_a4"
+cbaes_b1point_code,Integer,0,,Recommended,"Pointing to express interest - Code","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_b1point_code"
+cbaes_b1point,Integer,0,,Recommended,"Pointing to express interest - Score","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_b1point"
+cbaes_b1nod_code,Integer,0,,Recommended,"Nodding - Code","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_b1nod_code"
+cbaes_b1nod,Integer,0,,Recommended,"Nodding - Score","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_b1nod"
+cbaes_b1hshake_code,Integer,0,,Recommended,"Headshaking - Code","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_b1hshake_code"
+cbaes_b1hshake,Integer,0,,Recommended,"Headshaking - Score","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_b1hshake"
+cbaes_b1insges_code,Integer,0,,Recommended,"Conventional instrumental gestures - Code","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_b1insges_code"
+cbaes_b1insges,Integer,0,,Recommended,"Conventional instrumental gestures - Score","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_b1insges"
+cbaes_b1,Integer,0,,Recommended,"Lack of, or delay in, spoken language and failure to compensate through gesture","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_b1"
+cbaes_b2chat_code,Integer,0,,Recommended,"Social Chat (Score Ever if age 4 and above; score Current if under 4) - Code","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_b2chat_code"
+cbaes_b2chat,Integer,0,,Recommended,"Social Chat (Score Ever if age 4 and above; score Current if under 4) - Score","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_b2chat"
+cbaes_b2conver_code,Integer,0,,Recommended,"Reciprocal conversation (Score Ever if age 4 and above; score Current if under 4) - Code","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_b2conver_code"
+cbaes_b2conver,Integer,0,,Recommended,"Reciprocal conversation (Score Ever if age 4 and above; score Current if under 4) - Score","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_b2conver"
+cbaes_b2,Integer,0,,Recommended,"Relative failure to initiate or sustain conversational interchange","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_b2"
+cbaes_b3stereo_code,Integer,0,,Recommended,"Stereotyped utterances (Score Ever) - Code","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_b3stereo_code"
+cbaes_b3stereo,Integer,0,,Recommended,"Stereotyped utterances (Score Ever) - Score","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_b3stereo"
+cbaes_b3inappq_code,Integer,0,,Recommended,"Inappropriate questions (Score Ever) - Code","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_b3inappq_code"
+cbaes_b3inappq,Integer,0,,Recommended,"Inappropriate questions (Score Ever) - Score","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_b3inappq"
+cbaes_b3pron_code,Integer,0,,Recommended,"Pronominal reversal (Score Ever) - Code","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_b3pron_code"
+cbaes_b3pron,Integer,0,,Recommended,"Pronominal reversal (Score Ever) - Score","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_b3pron"
+cbaes_b3neoid_code,Integer,0,,Recommended,"Neologisms/idiosyncratic language (Score Ever) - Code","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_b3neoid_code"
+cbaes_b3neoid,Integer,0,,Recommended,"Neologisms/idiosyncratic language (Score Ever) - Score","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_b3neoid"
+cbaes_b3,Integer,0,,Recommended,"Stereotyped, repetitive, or idiosyncratic speech","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_b3"
+cbaes_b4imit_code,Integer,0,,Recommended,"Spontaneous imitation of actions - Code","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_b4imit_code"
+cbaes_b4imit,Integer,0,,Recommended,"Spontaneous imitation of actions - Score","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_b4imit"
+cbaes_b4play_code,Integer,0,,Recommended,"Imaginative play - Code","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_b4play_code"
+cbaes_b4play,Integer,0,,Recommended,"Imaginative play - Score","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_b4play"
+cbaes_b4soplay_code,Integer,0,,Recommended,"Imitative social play - Code","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_b4soplay_code"
+cbaes_b4soplay,Integer,0,,Recommended,"Imitative social play - Score","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_b4soplay"
+cbaes_b4,Integer,0,,Recommended,"Lack of varied spontaneous make-believe or social imitative play","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_b4"
+cbaes_c1unproc_code,Integer,0,,Recommended,"Unusual preoccupations - Code","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_c1unproc_code"
+cbaes_c1unproc,Integer,0,,Recommended,"Unusual preoccupations - Score","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_c1unproc"
+cbaes_c1cirint_code,Integer,0,,Recommended,"Circumscribed interests (4 years and over) - Code","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_c1cirint_code"
+cbaes_c1cirint,Integer,0,,Recommended,"Circumscribed interests (4 years and over) - Score","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_c1cirint"
+cbaes_c1,Integer,0,,Recommended,"Encompassing preoccupation or circumscribed pattern of interest","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_c1"
+cbaes_c2verrit_code,Integer,0,,Recommended,"Verbal rituals - Code","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_c2verrit_code"
+cbaes_c2verrit,Integer,0,,Recommended,"Verbal rituals - Score","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_c2verrit"
+cbaes_c2crit_code,Integer,0,,Recommended,"Compulsions/rituals - Code","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_c2crit_code"
+cbaes_c2crit,Integer,0,,Recommended,"Compulsions/rituals - Score","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_c2crit"
+cbaes_c2,Integer,0,,Recommended,"Apparently compulsive adherence to nonfunctional routines or rituals","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_c2"
+cbaes_c3hfman_code,Integer,0,,Recommended,"Hand and finger movements - Code","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_c3hfman_code"
+cbaes_c3othman_code,Integer,0,,Recommended,"Complex mannerisms - Code","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_c3othman_code"
+cbaes_c3hfman_othman,Integer,0,,Recommended,"Hand and finger movements OR Complex mannerisms (record higher score)","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_c3hfman_othman"
+cbaes_c3,Integer,0,,Recommended,"Stereotyped and repetitive motor mannerisms","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_c3"
+cbaes_c4useobj_code,Integer,0,,Recommended,"Repetitive use of objects - Code","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_c4useobj_code"
+cbaes_c4unsens_code,Integer,0,,Recommended,"Unusual sensory interests - Code","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_c4unsens_code"
+cbaes_c4useobj_unsens,Integer,0,,Recommended,"Repetitive use of objects OR Unusual sensory interests (record higher score)","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_c4useobj_unsens"
+cbaes_c4,Integer,0,,Recommended,"Preoccupations with part of objects or nonfunctional elements of material","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_c4"
+cbaes_atotal,Integer,0,,Recommended,"Total for Section A: Qualitative Abnormalities in Reciprocal Social Interaction","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_atotal"
+cbaes_bnvtotal,Integer,0,,Recommended,"Total of Section B - Non-Verbal: Qualitative Abnormalities in Communication","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_bnvtotal"
+cbaes_bvtotal,Integer,0,,Recommended,"Total of Section B - Verbal: Qualitative Abnormalities in Communication","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_bvtotal"
+cbaes_ctotal,Integer,0,,Recommended,"Total of Section C: Restricted, Repetitive, and Stereotyped Patterns of Behavior","",,"","Current Behavior Algorithm (entered scores)","ADI_2003_cbaes_ctotal"
+comments_ovlasst,String,255,,Optional,"Overall assessment","",,"","Concluding Comments","OVERAL_ASSESSMENT,Adi_R_Diagnostic_ADI_R_Raw_Overall_Measure,ADI_2003_comments_ovlasst"
+comments_impress,String,255,,Optional,"Interviewer's impressions and circumstances of interview","",,"","Concluding Comments","Adi_R_Diagnostic_ADI_R_Raw_Interviewer_impress,ADI_2003_comments_impress"
+comments_sumdiscrp,String,255,,Optional,"Summary of discrepancies between informant description and observer information","",,"","Concluding Comments","Adi_R_Diagnostic_ADI_R_Raw_Sum_Discrepancies,ADI_2003_comments_sumdiscrp"
